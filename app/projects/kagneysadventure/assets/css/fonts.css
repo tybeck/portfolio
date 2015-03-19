@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'fredoka_oneregular';
+    src: url('FredokaOne-Regular-webfont.eot');
+    src: url('FredokaOne-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('FredokaOne-Regular-webfont.woff2') format('woff2'),
+         url('FredokaOne-Regular-webfont.woff') format('woff'),
+         url('FredokaOne-Regular-webfont.ttf') format('truetype'),
+         url('FredokaOne-Regular-webfont.svg#fredoka_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
