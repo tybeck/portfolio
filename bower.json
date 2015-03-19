@@ -1,0 +1,23 @@
+{
+  "name": "TylerBeckPortfolio",
+  "version": "0.0.1",
+  "description": "Tyler Beck's Portfolio",
+  "keywords": [
+    "Tyler",
+    "Beck",
+    "Portfolio"
+  ],
+  "authors": [
+    "Tyler Beck"
+  ],
+  "license": "MIT",
+  "homepage": "tylerbeck.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
