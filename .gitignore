@@ -1,1 +1,10 @@
 node_modules
+.tmp
+.sass-cache
+.DS_Store
+app/bower_components
+app/scripts/config.js
+app/scripts/templates.js
+app/styles/app.css
+npm-debug.log
+www

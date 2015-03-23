@@ -1,23 +1,187 @@
-var express = require('express');
-var app = express();
+/**
+  * Primary Application for Tyler Beck's Portfolio
+  * @author: Tyler Beck
+  * @version: 0.0.1
+*/
 
-app.use('/projects/assets', express.static(__dirname + '/app/projects/kagneysadventure/assets/'));
-app.use('/projects/media', express.static(__dirname + '/app/projects/kagneysadventure/media/'));
-app.use(express.static(__dirname));
+'use strict';
 
-app.engine('.html', require('ejs').renderFile);
-app.set('views', '');
+var Server = {
 
-app.get('/', function(req, res, next) {
+	/**
+	 * Express object.
+	 * @property express
+	 * @type Object
+	 */
+
+	'express': require('express'),
+
+	/**
+	 * Instantiated Express application object.
+	 * @property app
+	 * @type Object
+	 */
+
+	'app': null,
+
+	'APP_VERSION': '0.0.1',
+
+	/**
+	 * Current directory of our server application.
+	 * @property dir
+	 * @type String
+	 */
+
+	'dir': __dirname + '/',
+
+	'config': {
+
+		/**
+		 * The port our application server will be listening on.
+		 * @property APP_PORT
+		 * @type Integer
+		 */
+
+		'APP_PORT': 80,
+
+		/**
+		 * @property ENVIRONMENT
+		 * @type String
+		 */
+
+		'ENVIRONMENT': 'development'
+
+	},
+
+	'statics': {
+
+		'ENV_TYPES': { 
 	
-	res.end('Coming soon - 2015');
+			'DEVELOPMENT': 'development',
 
-});
-
-app.get('/projects/kagneysadventure', function(req, res, next) {
+			'PRODUCTION': 'production'
+		
+		}
 	
-	res.render('app/projects/kagneysadventure/index-unminified.html');
+	},
 
-});
+	/**
+	 * Configure our express application
+	 * @method configure
+	 * @type Function
+	 */
 
-app.listen(80);
+	configure: function (server) {
+
+		var app = this,
+
+			express = server.express,
+
+			config = server.config,
+
+			statics = server.statics;
+
+		app.use(function() {
+
+			app.set('views', server.dir);
+
+			app.engine('.html', require('ejs').renderFile);
+
+			app.engine('.jade', require('jade').__express);
+
+		});
+
+		switch(config.ENVIRONMENT) {
+
+			case statics.ENV_TYPES.DEVELOPMENT:
+							
+				app.use(statics.ENV_TYPES.DEVELOPMENT, function() {
+
+					app.set('view options', { 
+
+						'pretty': true
+
+					});
+					
+					app.use(express.errorHandler({
+
+						'dumpExceptions': true,
+
+						'showStack': true
+
+					}));
+				
+				});
+			
+			break;
+			
+			case statics.ENV_TYPES.PRODUCTION:
+			
+				app.use(statics.ENV_TYPES.PRODUCTION, function() {
+
+					app.set('view options', {
+
+						'pretty': false
+
+					});
+					
+					app.use(express.errorHandler());
+				
+				});
+			
+			break;
+
+		}
+
+	},
+
+	/**
+	 * Message System
+	 * @property msg
+	 * @type Function
+	 */
+
+	msg: function(message) {
+
+		console.log(' ## Tyler+Beck ## ' + message);
+
+		return this;
+
+	},
+
+	/**
+	 * Setup primary application.
+	 * @property setup
+	 * @type Function
+	 */
+
+	setup: function () {
+
+		this.msg('Starting application - v' + this.APP_VERSION)
+			.msg('Running on <domain>:' + this.config.APP_PORT);
+
+		this.app = this.express();
+
+		this.configure.apply(this.app, [this]);
+
+		return this;
+
+	},
+
+	/**
+	 * Run primary application.
+	 * @property app
+	 * @type Object
+	 */
+
+	run: function () {
+
+		this.setup();
+
+	}
+
+};
+
+module.exports.Server = Server;
+
+Server.run();
