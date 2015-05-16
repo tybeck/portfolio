@@ -6,6 +6,8 @@
 
 'use strict';
 
+var extend = require('node.extend');
+
 var Server = {
 
 	/**
@@ -23,6 +25,14 @@ var Server = {
 	 */
 
 	'app': null,
+
+	/**
+	 * IO object (Socket.IO)
+	 * @property io
+	 * @type Object
+	 */
+
+	'io': null,
 
 	'APP_VERSION': '0.0.1',
 
@@ -71,9 +81,11 @@ var Server = {
 	 * @type Function
 	 */
 
-	configure: function (server) {
+	configure: function () {
 
-		var app = this,
+		var server = this,
+
+			app = server.app,
 
 			express = server.express,
 
@@ -81,21 +93,19 @@ var Server = {
 
 			statics = server.statics;
 
-		app.use(function() {
+		app.use(express.static(server.dir));
 
-			app.set('views', server.dir);
+		app.set('views', server.dir);
 
-			app.engine('.html', require('ejs').renderFile);
+		app.engine('.html', require('ejs').renderFile);
 
-			app.engine('.jade', require('jade').__express);
-
-		});
+		app.engine('.jade', require('jade').__express);
 
 		switch(config.ENVIRONMENT) {
 
 			case statics.ENV_TYPES.DEVELOPMENT:
 							
-				app.use(statics.ENV_TYPES.DEVELOPMENT, function() {
+				app.use(statics.ENV_TYPES.DEVELOPMENT, function () {
 
 					app.set('view options', { 
 
@@ -117,7 +127,7 @@ var Server = {
 			
 			case statics.ENV_TYPES.PRODUCTION:
 			
-				app.use(statics.ENV_TYPES.PRODUCTION, function() {
+				app.use(statics.ENV_TYPES.PRODUCTION, function () {
 
 					app.set('view options', {
 
@@ -133,6 +143,8 @@ var Server = {
 
 		}
 
+		return this;
+
 	},
 
 	/**
@@ -141,7 +153,7 @@ var Server = {
 	 * @type Function
 	 */
 
-	msg: function(message) {
+	msg: function (message) {
 
 		console.log(' ## Tyler+Beck ## ' + message);
 
@@ -157,12 +169,95 @@ var Server = {
 
 	setup: function () {
 
-		this.msg('Starting application - v' + this.APP_VERSION)
-			.msg('Running on <domain>:' + this.config.APP_PORT);
+		var nodes = require('./services/app');
 
-		this.app = this.express();
+		extend(this, {
 
-		this.configure.apply(this.app, [this]);
+			'app': nodes.app,
+
+			'io': nodes.io,
+
+			'http': nodes.http
+
+		});
+
+		this.configure()
+			.assets()
+			.routes()
+			.listen();
+
+		return this;
+
+	},
+	
+	/**
+	 * Setup our asset pathing.
+	 * @property routes
+	 * @type Function
+	 */
+
+	assets: function () {
+
+		var assets = require('./config/assets.json').assets,
+
+			express = this.express;
+
+		for(var key in assets) {
+
+			var projectAsset = assets[key];
+
+			for(var i = 0; i < projectAsset.length; i++ ) {
+
+				var asset = projectAsset[i];
+
+				this.app.use(asset.web_path, 
+
+					express.static(this.dir + asset.server_path));
+
+			}
+
+		}
+
+		return this;
+
+	},
+
+	/**
+	 * Setup our routes.
+	 * @property routes
+	 * @type Function
+	 */
+
+	routes: function () {
+
+		require('./routes');
+
+		this.app.use(require('./services/app').middlewares);
+
+		return this;
+
+	},
+
+	/**
+	 * Start listening
+	 * @property listen
+	 * @type Function
+	 */
+
+	listen: function () {
+
+		var self = this;
+
+		var instance = this.http.listen(this.config.APP_PORT, function () {
+
+			var host = instance.address().address,
+
+				port = instance.address().port;
+
+			self.msg('Starting application - v' + self.APP_VERSION)
+				.msg('Running on http://' + host + ':' + port);
+
+		});
 
 		return this;
 
@@ -176,7 +271,7 @@ var Server = {
 
 	run: function () {
 
-		this.setup();
+		return this.setup();
 
 	}
 

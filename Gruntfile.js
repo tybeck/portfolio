@@ -51,6 +51,16 @@ module.exports = function (grunt) {
 
         },
         
+        'nodemon': {
+
+          'dev': {
+
+            'script': 'server.js'
+
+          }
+
+        },
+
         // Automatically inject bower_components into the app
 
         'bowerInstall': {
@@ -405,7 +415,21 @@ module.exports = function (grunt) {
 
           'copy:scripts',
 
+          'nodemon',
+
           'watch'
+
+        ]);
+
+      });
+
+      grunt.registerTask('run', function (target) {
+
+        target = (!target || !target.length) ? 'development' : target;
+
+        grunt.task.run([
+
+          'nodemon:dev'
 
         ]);
 
