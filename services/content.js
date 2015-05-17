@@ -1,6 +1,6 @@
 var Q = require('q');
 
-module.exports.getProject = getProject = function(req) {
+module.exports.getProject = getProject = function (req) {
 
 	var projectName = req.params.projectName,
 
@@ -10,7 +10,7 @@ module.exports.getProject = getProject = function(req) {
 
 		case 'kagneysadventure':
 
-			return deferred.resolve('app/' + req.originalUrl + 
+			deferred.resolve('app' + req.originalUrl + 
 
 				'/index-unminified.html');
 
@@ -18,13 +18,23 @@ module.exports.getProject = getProject = function(req) {
 
 		default:
 
-			return deferred.resolve('app/' + req.originalUrl + 
+			deferred.resolve('app' + req.originalUrl + 
 
 				'/index.html');
 
 		break;
 
 	}
+
+	return deferred.promise;
+
+};
+
+module.exports.getSPA = getSPA = function () {
+
+	var deferred = Q.defer();
+
+	deferred.resolve('www/index.html');
 
 	return deferred.promise;
 

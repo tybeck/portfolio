@@ -6,6 +6,12 @@
 
 'use strict';
 
+/**
+ * Allows us to easily extend objects.
+ * @property extend
+ * @type Object
+ */
+
 var extend = require('node.extend');
 
 var Server = {
@@ -94,6 +100,10 @@ var Server = {
 			statics = server.statics;
 
 		app.use(express.static(server.dir));
+
+		app.use('/scripts', express.static(this.dir + 'www/scripts/'));
+		
+		app.use('/styles', express.static(this.dir + 'www/styles/'));
 
 		app.set('views', server.dir);
 
@@ -265,8 +275,8 @@ var Server = {
 
 	/**
 	 * Run primary application.
-	 * @property app
-	 * @type Object
+	 * @property run
+	 * @type Function
 	 */
 
 	run: function () {
