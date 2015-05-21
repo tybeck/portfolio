@@ -1,30 +1,36 @@
-var Q = require('q');
+var Q = require('q'),
+
+	client = require('./redis');
 
 module.exports.getProject = getProject = function (req) {
 
-	var projectName = req.params.projectName,
+	var projectName = (req.params.projectName).toLowerCase(),
 
 		deferred = Q.defer();
 
-	switch(projectName.toLowerCase()) {
+	client.get('projects', function (err, data) {
 
-		case 'kagneysadventure':
+		if(!err && data) {
 
-			deferred.resolve('app' + req.originalUrl + 
+			data = JSON.parse(data);
 
-				'/index-unminified.html');
+			for(var key in data) {
 
-		break;
+				var project = data[key].project;
 
-		default:
+				if(project.name === projectName) {
 
-			deferred.resolve('app' + req.originalUrl + 
+					deferred.resolve('app' + req.originalUrl + 
 
-				'/index.html');
+						'/' + project.index);
 
-		break;
+				}
 
-	}
+			}
+
+		}
+
+	});
 
 	return deferred.promise;
 

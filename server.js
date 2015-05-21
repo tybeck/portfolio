@@ -1,7 +1,7 @@
 /**
   * Primary Application for Tyler Beck's Portfolio
   * @author: Tyler Beck
-  * @version: 0.0.1
+  * @version: 0.0.2
 */
 
 'use strict';
@@ -12,7 +12,15 @@
  * @type Object
  */
 
-var extend = require('node.extend');
+var extend = require('node.extend'),
+
+	/**
+	 * Utility library delivering consistency, modularity, performance, & extras
+	 * @property _
+	 * @type Object
+	 */
+
+	_ = require('lodash');
 
 var Server = {
 
@@ -40,7 +48,15 @@ var Server = {
 
 	'io': null,
 
-	'APP_VERSION': '0.0.1',
+	/**
+	 * File System
+	 * @property fs
+	 * @type Object
+	 */
+
+	'fs': require('./services/fs'),
+
+	'APP_VERSION': '0.0.2',
 
 	/**
 	 * Current directory of our server application.
@@ -192,41 +208,58 @@ var Server = {
 		});
 
 		this.configure()
-			.assets()
-			.routes()
-			.listen();
+			.setupProjects();
 
 		return this;
 
 	},
 	
 	/**
-	 * Setup our asset pathing.
-	 * @property routes
+	 * Setup our projects.
+	 * @property setupProjects
 	 * @type Function
 	 */
 
-	assets: function () {
+	setupProjects: function () {
 
-		var assets = require('./config/assets.json').assets,
+		var client = require('./services/redis'),
 
-			express = this.express;
+			self = this,
 
-		for(var key in assets) {
+			express = self.express;
 
-			var projectAsset = assets[key];
+		this.fs.getProjects('app/projects')
 
-			for(var i = 0; i < projectAsset.length; i++ ) {
+			.then(function (projects) {
 
-				var asset = projectAsset[i];
+				client.set('projects', JSON.stringify(projects));
 
-				this.app.use(asset.web_path, 
+				_.forEach(projects, function (data) {
 
-					express.static(this.dir + asset.server_path));
+					var project = data.project;
 
-			}
+					_.forEach(project.assets, function (asset) {
 
-		}
+						self.app.use(asset.web, express.static(self.dir + 
+
+							asset.server));
+
+					});
+
+					if(project.hook && project.hook.length) {
+
+						require('./app/projects/' + project.name + '/' + 
+
+							project.hook).apply(self);
+
+					}
+
+				});
+
+				self.routes()
+					.listen();
+
+			});
 
 		return this;
 

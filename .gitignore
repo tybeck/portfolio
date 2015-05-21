@@ -6,5 +6,6 @@ app/bower_components
 app/scripts/config.js
 app/scripts/templates.js
 app/styles/app.css
+app/projects
 npm-debug.log
 www
