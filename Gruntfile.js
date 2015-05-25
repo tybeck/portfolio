@@ -299,7 +299,7 @@ module.exports = function (grunt) {
 
                 'files': ['<%= paths.app %>/<%= paths.scripts %>/**/*.js'],
 
-                'tasks': ['newer:jshint:all']
+                'tasks': ['newer:jshint:all', 'copy:scripts']
 
             },
 
@@ -371,7 +371,7 @@ module.exports = function (grunt) {
 
                 'options': {
 
-                    'debugInfo': true
+                    'debugInfo': false
 
                 }
 
@@ -414,8 +414,6 @@ module.exports = function (grunt) {
           'copy:styles',
 
           'copy:scripts',
-
-          'nodemon',
 
           'watch'
 
