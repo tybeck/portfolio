@@ -47,7 +47,9 @@ module.exports = function (grunt) {
 
             'dist': 'www',
 
-            'images': 'images'
+            'images': 'images',
+
+            'templates': 'templates'
 
         },
         
@@ -151,7 +153,7 @@ module.exports = function (grunt) {
 
             'options': {
 
-                'module': 'TylerBeck'
+                'module': 'tyb'
 
             },
 
@@ -159,7 +161,7 @@ module.exports = function (grunt) {
 
                 'cwd': '<%= paths.app %>',
 
-                'src': 'views/**/*.html',
+                'src': 'templates/**/*.html',
 
                 'dest': '<%= paths.app %>/scripts/templates.js'
 
@@ -259,6 +261,66 @@ module.exports = function (grunt) {
 
           },
 
+          'templates': {
+
+            'files': [
+
+              {
+
+                'expand': true,
+            
+                'cwd': '<%= paths.app %>/<%= paths.templates %>/',
+            
+                'dest': '<%= paths.dist %>/<%= paths.templates %>/',
+            
+                'src': '{,*/}*.html'
+
+              }
+
+            ]
+
+          },
+
+          'fonts': {
+
+            'files': [
+
+              {
+
+                'expand': true,
+            
+                'cwd': '<%= paths.app %>/<%= paths.styles %>/fonts/',
+            
+                'dest': '<%= paths.dist %>/<%= paths.styles %>/fonts/',
+            
+                'src': '{,*/}*.*'
+
+              }
+
+            ]
+
+          },
+
+          'images': {
+
+            'files': [
+
+              {
+
+                'expand': true,
+            
+                'cwd': '<%= paths.app %>/<%= paths.images %>/',
+            
+                'dest': '<%= paths.dist %>/<%= paths.images %>/',
+            
+                'src': '{,*/}*.*'
+
+              }
+
+            ]
+
+          },
+
           'styles': {
         
             'expand': true,
@@ -307,7 +369,7 @@ module.exports = function (grunt) {
 
                 'files': ['<%= paths.app %>/*.html', '<%= paths.app %>/templates/**/*.html'],
 
-                'tasks': ['copy:main', 'ngtemplates', 'bowerInstall']
+                'tasks': ['copy:main', 'copy:templates', 'ngtemplates', 'bowerInstall']
 
             },
 
@@ -329,7 +391,9 @@ module.exports = function (grunt) {
 
                   'autoprefixer',
 
-                  'copy:styles'
+                  'copy:styles',
+
+                  'copy:fonts'
 
                 ]
 
@@ -414,6 +478,12 @@ module.exports = function (grunt) {
           'copy:styles',
 
           'copy:scripts',
+
+          'copy:templates',
+
+          'copy:fonts',
+
+          'copy:images',
 
           'watch'
 

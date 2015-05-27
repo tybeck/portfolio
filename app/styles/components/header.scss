@@ -1,0 +1,40 @@
+div.tyb-site-header-container {
+
+	width: 100%;
+	border-top: 5px solid #213F9A;
+	border-bottom: 1px solid #434549;
+	position: absolute;
+	display: block;
+	height: 65px;
+
+	nav {
+		ul {
+			list-style: none;
+			list-style-type: none;
+			vertical-align: top;
+			li {
+				display: inline-block;
+				margin-right: 15px;
+				margin-left: 15px;
+				width: 50%;
+			}
+		}
+	}
+
+}
+
+@media (min-width: 550px) {
+
+	div.tyb-site-header-container {
+
+		nav {
+			ul {
+				li {
+					width: auto;
+				}
+			}
+		}
+		
+	}
+
+}

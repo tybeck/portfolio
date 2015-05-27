@@ -121,6 +121,8 @@ var Server = {
 		
 		app.use('/styles', express.static(this.dir + 'www/styles/'));
 
+		app.use('/images', express.static(this.dir + 'www/images/'));
+
 		app.set('views', server.dir);
 
 		app.engine('.html', require('ejs').renderFile);

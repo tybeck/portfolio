@@ -5,6 +5,6 @@ dir=/c/redis/
 
 cd $dir
 
-./redis-server.exe
+./redis-server.exe --maxheap 12000M
 
 read -p "Press [Enter] key..."

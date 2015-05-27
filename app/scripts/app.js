@@ -1,3 +1,5 @@
 'use strict';
 
-angular.module('tyb', []);
+angular.module('tyb', [
+	'ui.router'
+]);

@@ -1,0 +1,21 @@
+body {
+	background-color: #FFF;
+	font-family: "roboto_condensedlight";
+	width: 100%;
+	overflow: hidden !important;
+	text-align: center;
+	-webkit-overflow-scrolling: touch;
+}
+
+body a {
+	text-decoration: none;
+}
+
+main {
+  background: #FFF;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  display: block;
+}
