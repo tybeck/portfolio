@@ -16,24 +16,55 @@
 			height: 100%;
 		}
 
-		h1:first-child {
-			
-			font-family: "roboto_condensedbold";
-			text-transform: uppercase;
-			letter-spacing: 5px;
-			font-size: 8.75rem;
+		.tyb-home-hero-text {
+
 			left: 0;
-			line-height: 200px;
 			margin: auto;
-			margin-top: -100px;
+			margin-top: 20px;
 			position: absolute;
 			top: 50%;
 			width: 100%;
-			color: #FFF;
 
-			span {
+			h1:first-child {
+				
+				font-family: "roboto_condensedbold";
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				font-size: 8.75rem;
+				margin-bottom: 5px;
+				color: #FFF;
+
+				span {
+					font-family: "roboto_condensedlight";
+					letter-spacing: 2px;
+				}
+
+			}
+
+			h2 {
+
 				font-family: "roboto_condensedlight";
-				letter-spacing: 2px;
+				color: #FFF;
+
+				span {
+					color: #a9baed;
+				}
+
+			}
+
+			h1:first-child:before {
+				background: url('../images/sprite.png');
+				background-repeat: no-repeat;
+				background-position: 0px -34px;
+				height: 148px;
+				display: block;
+				text-align: center;
+				position: absolute;
+				width: 149px;
+				content: "";
+				margin-top: -200px;
+				left: 50%;
+				margin-left: -74.5px;
 			}
 
 		}
