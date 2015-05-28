@@ -1,24 +1,79 @@
 div.tyb-site-header-container {
 
 	width: 100%;
+	position: absolute;
+	display: block;
+	height: 65px;
+	z-index: 1;
+
+	header { 
+		div.row {
+
+			margin-top: 22px;
+
+			a.tyb-site-news {
+
+				color: #FFF;
+				text-transform: uppercase;
+				background: url('../images/sprite.png');
+				background-repeat: no-repeat;
+				background-position: 0px 2px;
+				padding-left: 30px;
+				width: 85px;
+				height: 25px;
+				display: inline-block;
+
+				span {
+					color: #a9baed;
+					margin-right: 4px;
+				}
+
+			}
+
+		}
+	}
+
+	nav {
+
+		ul {
+
+			list-style: none;
+			list-style-type: none;
+			vertical-align: top;
+
+			li {
+
+				display: inline-block;
+				margin-right: 15px;
+				margin-left: 15px;
+				width: 50%;
+
+				a {
+					color: #FFF;
+					text-transform: uppercase;
+				}
+
+			}
+		}
+	}
+
+}
+
+div.tyb-site-header-block {
+
+	width: 100%;
 	border-top: 5px solid #213F9A;
 	border-bottom: 1px solid #434549;
 	position: absolute;
 	display: block;
 	height: 65px;
+	z-index: 1;
 
-	nav {
-		ul {
-			list-style: none;
-			list-style-type: none;
-			vertical-align: top;
-			li {
-				display: inline-block;
-				margin-right: 15px;
-				margin-left: 15px;
-				width: 50%;
-			}
-		}
+	.tyb-site-selected-source {
+		top: 65px;
+		position: absolute;
+		background-color: #FFF;
+		height: 1px;
 	}
 
 }

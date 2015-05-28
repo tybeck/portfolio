@@ -1,8 +1,43 @@
-.tyb-home-hero-section {
-	background-size: cover;
-	background-position: center center;
-	background-image: url('../images/bg-showcase.png');
-	text-align: center;
-	position: relative;
-	top: 0;
+.tyb-home-container {
+
+	height: 100%;
+
+	.tyb-home-hero-section {
+
+		background-size: cover;
+		background-position: center center;
+		background-image: url('../images/bg-showcase.png');
+		text-align: center;
+		position: relative;
+		height: 100%;
+		top: 0;
+
+		.tyb-home-hero-wrapper {
+			height: 100%;
+		}
+
+		h1:first-child {
+			
+			font-family: "roboto_condensedbold";
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-size: 8.75rem;
+			left: 0;
+			line-height: 200px;
+			margin: auto;
+			margin-top: -100px;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			color: #FFF;
+
+			span {
+				font-family: "roboto_condensedlight";
+				letter-spacing: 2px;
+			}
+
+		}
+
+	}
+
 }

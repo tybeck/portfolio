@@ -11,11 +11,22 @@ body a {
 	text-decoration: none;
 }
 
-main {
-  background: #FFF;
-  margin: 0px;
-  width: 100%;
-  height: auto;
-  overflow: auto;
-  display: block;
+div#main {
+	background: #FFF;
+	margin: 0px;
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	display: block;
+	-ms-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	position: absolute;
+	z-index: 0;
+}
+
+div#main main {
+	height: 100%;
 }

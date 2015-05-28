@@ -9,7 +9,7 @@
  
 angular.module('tyb')
 
-    .directive('headerContainer', function () {
+    .directive('headerContainer', function ($rootScope, $location, $timeout) {
 
         return {
 
@@ -21,8 +21,52 @@ angular.module('tyb')
 
             'scope': true,
 
-            controller: function () {
+            link: function (scope, element) {
 
+                var getElement = function (path) {
+
+                    if(path === '/') {
+
+                        path = '/home';
+
+                    }
+
+                    var el = element[0],
+
+                        linkElement = el.querySelector('a[href="#' + path + '"]');
+
+                    if(linkElement) {
+
+                        $timeout(function () {
+
+                            var boundingRect = linkElement.getBoundingClientRect();
+
+                            scope.$emit('header.selector', {
+
+                                'width': linkElement.offsetWidth,
+
+                                'left': boundingRect.left
+
+                            });
+
+                        }, 50);
+
+                    }
+
+                };
+
+                $rootScope.$on('$stateChangeStart', function (event, toState) {
+
+                    getElement(toState.url);
+
+                });
+
+                angular.element(document).ready(function () {
+
+                    getElement($location.path());
+
+                });
+                
             }
 
         };
