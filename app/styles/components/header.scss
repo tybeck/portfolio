@@ -46,7 +46,7 @@ div.tyb-site-header-container {
 				display: inline-block;
 				margin-right: 15px;
 				margin-left: 15px;
-				width: 50%;
+				width: auto;
 
 				a {
 					color: #FFF;
@@ -78,18 +78,82 @@ div.tyb-site-header-block {
 
 }
 
-@media (min-width: 550px) {
+/* iPad  */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
 
 	div.tyb-site-header-container {
 
-		nav {
-			ul {
-				li {
-					width: auto;
-				}
+		header.container {
+
+			div.one-third.column {
+				width: 26.6666666667%;
 			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 0%;
+				width: 72.3333333333%;
+			}
+
 		}
-		
+
+		nav {
+
+			ul {
+
+				li {
+
+					margin-right: 10px;
+					margin-left: 10px;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+
+	div.tyb-site-header-container {
+
+		header.container {
+
+			div.one-third.column {
+				width: 30.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 12.3333333333%;
+				width: 53%;
+			}
+
+		}
+
+		nav {
+
+			ul {
+
+				li {
+
+					margin-right: 10px;
+					margin-left: 10px;
+
+				}
+
+			}
+
+		}
+
 	}
 
 }

@@ -23,13 +23,17 @@ angular.module('tyb')
 
             link: function (scope, element) {
 
-                var getElement = function (path) {
+                var previousPath = null,
+
+                    getElement = function (path) {
 
                     if(path === '/') {
 
                         path = '/home';
 
                     }
+
+                    previousPath = path;
 
                     var el = element[0],
 
@@ -45,7 +49,9 @@ angular.module('tyb')
 
                                 'width': linkElement.offsetWidth,
 
-                                'left': boundingRect.left
+                                'left': boundingRect.left,
+
+                                'lastElement': linkElement
 
                             });
 
@@ -54,6 +60,12 @@ angular.module('tyb')
                     }
 
                 };
+
+                $rootScope.$on('tyb.resize', function () {
+
+                    getElement(previousPath);
+
+                });
 
                 $rootScope.$on('$stateChangeStart', function (event, toState) {
 

@@ -23,6 +23,8 @@ angular.module('tyb')
 
             link: function (scope, element) {
 
+                var lastElement = null;
+
                 $rootScope.$on('header.selector', function (ev, data) {
 
                     var selector = angular.element(element.children()[0]);
@@ -30,6 +32,8 @@ angular.module('tyb')
                     selector
                         .css('width', data.width + 'px')
                         .css('left', data.left + 'px');
+
+                    lastElement = data.lastElement;
 
                 });
 

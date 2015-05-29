@@ -293,7 +293,7 @@ var Server = {
 
 		var self = this;
 
-		var instance = this.http.listen(this.config.APP_PORT, function () {
+		var instance = this.http.listen(this.config.APP_PORT, '10.0.0.11', function () {
 
 			var host = instance.address().address,
 
