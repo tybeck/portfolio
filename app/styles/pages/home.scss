@@ -83,6 +83,116 @@
 
 	}
 
+	.tyb-home-main-content {
+		
+		margin-top: 80px;
+
+		h2:first-child {
+
+			text-transform: uppercase;
+			font-family: "roboto_condensedbold";
+			letter-spacing: 7px;
+			font-size: 3em;
+			color: #000;
+
+			&:before {
+				height: 35px;
+				width: 1px;
+				background: #787878;
+				display: block;
+				content: "";
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+
+			span {
+				color: #213f9a;
+			}
+
+		}
+
+		p {
+			font-size: 1.9rem;
+			font-family: "roboto_condensedlight";
+			color: #3E3E3E;
+			width: 75%;
+			display: block;
+			line-height: 3.35rem;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			letter-spacing: .7px;
+			margin-bottom: 0;
+		}
+
+		.tyb-about-me-link-button,
+		.tyb-portfolio-link-button {
+			margin-top: 3.75rem;
+			display: inline-block;
+			margin-bottom: 3.75rem;
+		}
+
+		.tyb-skills-container {
+
+			ul {
+
+				list-style: none;
+
+				li {
+
+					width: 49%;
+					text-align: left;
+					display: inline-block;
+					font-family: "roboto_condensedbold";
+					font-size: 1.4rem;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					margin-bottom: 3rem;
+					
+					.tyb-skill {
+
+						> span {
+
+							display: block;
+							margin-bottom: 1.5rem;
+							margin-left: 2.5%;
+
+							span {
+
+								color: #213f9a;
+
+							}
+
+						}
+
+						.tyb-progress-container {
+
+							width: 95%;
+							height: 2.75rem;
+							border-bottom: 1px solid #777;
+							margin-right: auto;
+							margin-left: auto;
+							text-align: center;
+
+							.tyb-progress-bar {
+								height: 2.5rem;
+								background-color: #213f9a;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 @media (min-width: 1152px) and (max-width: 1399px) {
@@ -138,6 +248,25 @@
 
 		}
 
+		.tyb-home-main-content {
+
+			margin-top: 60px;
+
+			p {
+				font-size: 1.8rem;
+				font-family: "roboto_condensedlight";
+				color: #3E3E3E;
+				width: 100%;
+				display: block;
+				line-height: 3.15rem;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				letter-spacing: .7px;
+			}
+
+		}
+
 	}
 
 }
@@ -166,6 +295,182 @@
 
 			.tyb-scroll-down {
 				margin-top: 40px;
+			}
+
+		}
+
+		.tyb-home-main-content {
+
+			margin-top: 60px;
+
+			p {
+				font-size: 1.8rem;
+				font-family: "roboto_condensedlight";
+				color: #3E3E3E;
+				width: 100%;
+				display: block;
+				line-height: 3.15rem;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				letter-spacing: .7px;
+			}
+
+		}
+
+	}
+
+}
+
+/* iPhone  */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				margin: -55px auto auto auto;
+
+				h1:first-child {
+
+					font-size: 5.0rem;
+
+				}
+
+				h2 {
+
+					font-size: 2.475rem;
+
+				}
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -27px;
+					height: 122px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					background-size: 400px;
+					width: 127px;
+					content: "";
+					margin-top: -135px;
+					left: 50%;
+					margin-left: -58.5px;
+				}
+
+			}
+
+			.tyb-scroll-down {
+				background: url("../images/sprite.png");
+				background-repeat: no-repeat;
+				background-position: 0px -192px;
+				display: block;
+				width: 94px;
+				margin-left: auto;
+				height: 90px;
+				margin-right: auto;
+				text-align: center;
+				margin-top: 25px;
+			}
+
+		}
+
+		.tyb-home-main-content {
+
+			margin-top: 40px;
+
+			p {
+				font-size: 1.5rem;
+				font-family: "roboto_condensedlight";
+				color: #3E3E3E;
+				width: 100%;
+				display: block;
+				line-height: 3.15rem;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				letter-spacing: .5px;
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				margin: 20px auto auto auto;
+
+				h1:first-child {
+
+					font-size: 3.75rem;
+
+				}
+
+				h2 {
+
+					font-size: 1.75rem;
+
+				}
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -20px;
+					height: 89px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					background-size: 300px;
+					width: 90px;
+					content: "";
+					margin-top: -93px;
+					left: 50%;
+					margin-left: -43.25px;
+				}
+
+			}
+
+			.tyb-scroll-down {
+				display: none;
+			}
+
+		}
+
+		.tyb-home-main-content {
+
+			margin-top: 40px;
+
+			p {
+				font-size: 1.5rem;
+				font-family: "roboto_condensedlight";
+				color: #3E3E3E;
+				width: 100%;
+				display: block;
+				line-height: 3.15rem;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				letter-spacing: .5px;
 			}
 
 		}

@@ -398,6 +398,16 @@ hr {
   }
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .container {
+      max-width: 550px;
+    }
+}
+
 @media (min-width: 750px) {
   .container {
     max-width: 620px;
