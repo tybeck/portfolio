@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('tyb', [
-	'ui.router'
+	'ui.router',
+	'angular-carousel'
 ]);

@@ -9,23 +9,33 @@
 
 angular.module('tyb')
 
-	.directive('resize', function ($window) {
+	.directive('resize', function ($rootScope, $window) {
 
 	    return function (scope) {
 
 	        var w = angular.element($window);
 
-	        scope.getWindowDimensions = function () {
+	        angular.extend(scope, {
 
-	            return {
+				getWindowDimensions: function () {
 
-	                'h': w[0].innerHeight,
+				    return {
 
-	                'w': w[0].innerWidth
+				        'h': w[0].innerHeight,
 
-	            };
+				        'w': w[0].innerWidth
 
-	        };
+				    };
+
+				},
+
+				broadcastVisibility: function () {
+
+					$rootScope.$broadcast('tyb.visibility');
+
+				}
+
+	        });
 
 	        scope.$watch(scope.getWindowDimensions, function (newValue) {
 
@@ -35,7 +45,19 @@ angular.module('tyb')
 
 	        w.bind('resize', function () {
 
+	        	scope.broadcastVisibility();
+
 	            scope.$apply();
+
+	        });
+
+	        w.bind('DOMContentLoaded load', scope.broadcastVisibility);
+
+	        angular.element(document).ready(function () {
+
+	        	var main = angular.element(document.getElementById('main'));
+
+	        	main.bind('scroll', scope.broadcastVisibility);
 
 	        });
 
