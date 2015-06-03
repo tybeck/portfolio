@@ -23,7 +23,12 @@ angular.module('tyb')
 
             link: function () {
 
-                console.log(Projects);
+                Projects.getProjectsByName(['steinmart', 'petsmart', 'sony'])
+                    .then(function () {
+
+                        
+
+                });
 
             }
 

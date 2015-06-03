@@ -1,3 +1,4 @@
 {
-    "ENV": "production"
+    "ENV": "production",
+    "PROJECTS_BY_NAME": "/api/projects?names={{names}}"
 }

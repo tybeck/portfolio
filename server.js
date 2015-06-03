@@ -311,7 +311,7 @@ var Server = {
 
 		require('./routes');
 
-		this.app.use(require('./services/app').middlewares);
+		require('./services/app').middlewares();
 
 		return this;
 
