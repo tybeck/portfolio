@@ -19,7 +19,7 @@
 		.tyb-home-hero-text {
 
 			left: 0;
-			margin: -40px auto auto auto;
+			margin: -5.5rem auto auto auto;
 			position: absolute;
 			top: 50%;
 			width: 100%;
@@ -28,14 +28,14 @@
 				
 				font-family: "roboto_condensedbold";
 				text-transform: uppercase;
-				letter-spacing: 5px;
-				font-size: 8.75rem;
-				margin-bottom: 5px;
+				letter-spacing: 0.5rem;
+				font-size: 5.0rem;
+				margin-bottom: 0.5rem;
 				color: #FFF;
 
 				span {
 					font-family: "roboto_condensedlight";
-					letter-spacing: 2px;
+					letter-spacing: 0.2rem;
 				}
 
 			}
@@ -43,6 +43,7 @@
 			h2 {
 
 				font-family: "roboto_condensedlight";
+				font-size: 2.475rem;
 				color: #FFF;
 
 				span {
@@ -54,16 +55,17 @@
 			h1:first-child:before {
 				background: url('../images/sprite.png');
 				background-repeat: no-repeat;
-				background-position: 0px -34px;
-				height: 148px;
+				background-position: 0px -27px;
+				height: 122px;
 				display: block;
 				text-align: center;
 				position: absolute;
-				width: 149px;
+				background-size: 400px;
+				width: 127px;
 				content: "";
-				margin-top: -200px;
+				margin-top: -13.5rem;
 				left: 50%;
-				margin-left: -74.5px;
+				margin-left: -58.5px;
 			}
 
 		}
@@ -78,20 +80,20 @@
 			height: 90px;
 			margin-right: auto;
 			text-align: center;
-			margin-top: 60px;
+			margin-top: 2.5rem;
 		}
 
 	}
 
 	.tyb-home-main-content {
 		
-		margin-top: 80px;
+		margin-top: 4.0rem;
 
 		h2:first-child {
 
 			text-transform: uppercase;
 			font-family: "roboto_condensedbold";
-			letter-spacing: 7px;
+			letter-spacing: 0.7rem;
 			font-size: 3em;
 			color: #000;
 
@@ -103,7 +105,7 @@
 				content: "";
 				margin-left: auto;
 				margin-right: auto;
-				margin-bottom: 20px;
+				margin-bottom: 2.0rem;
 				text-align: center;
 			}
 
@@ -114,16 +116,16 @@
 		}
 
 		p {
-			font-size: 1.9rem;
+			font-size: 1.5rem;
 			font-family: "roboto_condensedlight";
 			color: #3E3E3E;
-			width: 75%;
+			width: 100%;
 			display: block;
-			line-height: 3.35rem;
+			line-height: 3.15rem;
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
-			letter-spacing: .7px;
+			letter-spacing: 0.05rem;
 			margin-bottom: 0;
 		}
 
@@ -148,7 +150,7 @@
 					font-family: "roboto_condensedbold";
 					font-size: 1.4rem;
 					text-transform: uppercase;
-					letter-spacing: 1px;
+					letter-spacing: 0.1rem;
 					margin-bottom: 3rem;
 					
 					.tyb-skill {
@@ -200,221 +202,7 @@
 
 }
 
-@media (min-width: 1152px) and (max-width: 1399px) {
-	
-	.tyb-home-container {
-
-		.tyb-home-hero-section {
-
-			.tyb-home-hero-text {
-
-				h1:first-child {
-					
-					font-size: 7.5rem;
-
-				}
-
-				h2 {
-
-					font-size: 3.2rem;
-
-				}
-
-			}
-
-		}
-
-	}
-
-}
-
-/* iPad */
-
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) {
-
-	.tyb-home-container {
-
-		.tyb-home-hero-section {
-
-			.tyb-home-hero-text {
-
-				margin-top: -100px;
-
-				h1:first-child {
-
-					margin-bottom: 20px;
-
-				}
-
-			}
-
-		}
-
-		.tyb-home-main-content {
-
-			margin-top: 60px;
-
-			p {
-				font-size: 1.8rem;
-				font-family: "roboto_condensedlight";
-				color: #3E3E3E;
-				width: 100%;
-				display: block;
-				line-height: 3.15rem;
-				margin-left: auto;
-				margin-right: auto;
-				text-align: center;
-				letter-spacing: .7px;
-			}
-
-		}
-
-	}
-
-}
-
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) {
-
-	.tyb-home-container {
-
-		.tyb-home-hero-section {
-
-			.tyb-home-hero-text {
-
-				margin-top: -25px;
-
-				h1:first-child {
-
-					font-size: 6.0rem;
-					margin-bottom: 20px;
-
-				}
-
-			}
-
-			.tyb-scroll-down {
-				margin-top: 40px;
-			}
-
-		}
-
-		.tyb-home-main-content {
-
-			margin-top: 60px;
-
-			p {
-				font-size: 1.8rem;
-				font-family: "roboto_condensedlight";
-				color: #3E3E3E;
-				width: 100%;
-				display: block;
-				line-height: 3.15rem;
-				margin-left: auto;
-				margin-right: auto;
-				text-align: center;
-				letter-spacing: .7px;
-			}
-
-		}
-
-	}
-
-}
-
-/* iPhone  */
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
-	.tyb-home-container {
-
-		.tyb-home-hero-section {
-
-			.tyb-home-hero-text {
-
-				margin: -55px auto auto auto;
-
-				h1:first-child {
-
-					font-size: 5.0rem;
-
-				}
-
-				h2 {
-
-					font-size: 2.475rem;
-
-				}
-
-				h1:first-child:before {
-					background: url('../images/sprite.png');
-					background-repeat: no-repeat;
-					background-position: 0px -27px;
-					height: 122px;
-					display: block;
-					text-align: center;
-					position: absolute;
-					background-size: 400px;
-					width: 127px;
-					content: "";
-					margin-top: -135px;
-					left: 50%;
-					margin-left: -58.5px;
-				}
-
-			}
-
-			.tyb-scroll-down {
-				background: url("../images/sprite.png");
-				background-repeat: no-repeat;
-				background-position: 0px -192px;
-				display: block;
-				width: 94px;
-				margin-left: auto;
-				height: 90px;
-				margin-right: auto;
-				text-align: center;
-				margin-top: 25px;
-			}
-
-		}
-
-		.tyb-home-main-content {
-
-			margin-top: 40px;
-
-			p {
-				font-size: 1.5rem;
-				font-family: "roboto_condensedlight";
-				color: #3E3E3E;
-				width: 100%;
-				display: block;
-				line-height: 3.15rem;
-				margin-left: auto;
-				margin-right: auto;
-				text-align: center;
-				letter-spacing: .5px;
-			}
-
-		}
-
-	}
-
-}
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
 
 	.tyb-home-container {
@@ -423,7 +211,7 @@
 
 			.tyb-home-hero-text {
 
-				margin: 20px auto auto auto;
+				margin: 2.0rem auto auto auto;
 
 				h1:first-child {
 
@@ -448,7 +236,7 @@
 					background-size: 300px;
 					width: 90px;
 					content: "";
-					margin-top: -93px;
+					margin-top: -9.3rem;
 					left: 50%;
 					margin-left: -43.25px;
 				}
@@ -463,7 +251,7 @@
 
 		.tyb-home-main-content {
 
-			margin-top: 40px;
+			margin-top: 4.0rem;
 
 			p {
 				font-size: 1.5rem;
@@ -475,11 +263,432 @@
 				margin-left: auto;
 				margin-right: auto;
 				text-align: center;
-				letter-spacing: .5px;
+				letter-spacing: 0.05rem;
 			}
 
 		}
 
 	}
+
+}
+
+@media (min-width: 510px) {
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				h1:first-child {
+
+
+					font-size: 3.50rem;
+
+				}
+
+				h2 {
+
+					font-size: 2.475rem;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				margin: -10.0rem auto auto auto;
+
+				h1:first-child {
+					
+					font-size: 8.75rem;
+
+				}
+
+				h2 {
+
+					font-size: 3.475rem;
+
+				}
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -34px;
+					height: 148px;
+					width: 149px;
+					content: "";
+					margin-top: -20.0rem;
+					left: 50%;
+					margin-left: -74.5px;
+				}
+
+			}
+
+			.tyb-scroll-down {
+				background: url("../images/sprite.png");
+				background-repeat: no-repeat;
+				background-position: 0px -192px;
+				display: block;
+				width: 94px;
+				margin-left: auto;
+				height: 90px;
+				margin-right: auto;
+				text-align: center;
+				margin-top: 6.0rem;
+			}
+
+		}
+
+		.tyb-home-main-content {
+			
+			margin-top: 6.0rem;
+
+			h2:first-child {
+
+				text-transform: uppercase;
+				font-family: "roboto_condensedbold";
+				margin-bottom: 2.0rem;
+				letter-spacing: 0.7rem;
+				font-size: 3em;
+				color: #000;
+
+				&:before {
+					height: 35px;
+					width: 1px;
+					background: #787878;
+					display: block;
+					content: "";
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 2.0rem;
+					text-align: center;
+				}
+
+				span {
+					color: #213f9a;
+				}
+
+			}
+
+			p {
+				font-size: 1.9rem;
+				line-height: 3.35rem;
+				letter-spacing: 0.07rem;
+			}
+
+		}
+
+	}
+
+}
+
+@media (min-width: 768px)
+	and (orientation: landscape) {
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				margin-top: -2.5rem;
+
+				h1:first-child {
+
+					font-size: 6.0rem;
+
+				}
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -27px;
+					height: 122px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					background-size: 400px;
+					width: 127px;
+					content: "";
+					margin-top: -13.5rem;
+					left: 50%;
+					margin-left: -58.5px;
+				}
+
+			}
+
+			.tyb-scroll-down {
+				margin-top: 4.0rem;
+			}
+
+		}
+
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+	.tyb-home-container {
+
+		height: 100%;
+
+		.tyb-home-hero-section {
+
+			background-size: cover;
+			background-position: center center;
+			background-image: url('../images/bg-showcase.png');
+			text-align: center;
+			position: relative;
+			height: 100%;
+			top: 0;
+
+			.tyb-home-hero-wrapper {
+				height: 100%;
+			}
+
+			.tyb-home-hero-text {
+
+				left: 0;
+				margin: -4.0rem auto auto auto;
+				position: absolute;
+				top: 50%;
+				width: 100%;
+
+				h1:first-child {
+					
+					font-family: "roboto_condensedbold";
+					text-transform: uppercase;
+					letter-spacing: 0.5rem;
+					font-size: 8.75rem;
+					margin-bottom: 0.5rem;
+					color: #FFF;
+
+					span {
+						font-family: "roboto_condensedlight";
+						letter-spacing: 0.2rem;
+					}
+
+				}
+
+				h2 {
+
+					font-family: "roboto_condensedlight";
+					font-size: 4.2rem;
+					color: #FFF;
+
+					span {
+						color: #a9baed;
+					}
+
+				}
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -34px;
+					height: 148px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					width: 149px;
+					content: "";
+					margin-top: -20.0rem;
+					left: 50%;
+					margin-left: -74.5px;
+				}
+
+			}
+
+			.tyb-scroll-down {
+				background: url("../images/sprite.png");
+				background-repeat: no-repeat;
+				background-position: 0px -192px;
+				display: block;
+				width: 94px;
+				margin-left: auto;
+				height: 90px;
+				margin-right: auto;
+				text-align: center;
+				margin-top: 6.0rem;
+			}
+
+		}
+
+		.tyb-home-main-content {
+			
+			margin-top: 8.0rem;
+
+			h2:first-child {
+
+				text-transform: uppercase;
+				font-family: "roboto_condensedbold";
+				letter-spacing: 0.7rem;
+				font-size: 3em;
+				color: #000;
+
+				&:before {
+					height: 35px;
+					width: 1px;
+					background: #787878;
+					display: block;
+					content: "";
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 2.0rem;
+					text-align: center;
+				}
+
+				span {
+					color: #213f9a;
+				}
+
+			}
+
+			p {
+				font-size: 1.9rem;
+				font-family: "roboto_condensedlight";
+				color: #3E3E3E;
+				width: 75%;
+				display: block;
+				line-height: 3.35rem;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				letter-spacing: 0.07rem;
+				margin-bottom: 0;
+			}
+
+			.tyb-about-me-link-button,
+			.tyb-portfolio-link-button {
+				margin-top: 3.75rem;
+				display: inline-block;
+				margin-bottom: 3.75rem;
+			}
+
+			.tyb-skills-container {
+
+				ul {
+
+					list-style: none;
+
+					li {
+
+						width: 49%;
+						text-align: left;
+						display: inline-block;
+						font-family: "roboto_condensedbold";
+						font-size: 1.4rem;
+						text-transform: uppercase;
+						letter-spacing: 0.1rem;
+						margin-bottom: 3rem;
+						
+						.tyb-skill {
+
+							> span {
+
+								display: block;
+								margin-bottom: 1.5rem;
+								margin-left: 2.5%;
+
+								span {
+
+									color: #213f9a;
+
+								}
+
+							}
+
+							.tyb-progress-container {
+
+								width: 95%;
+								height: 2.75rem;
+								border-bottom: 1px solid #777;
+								margin-right: auto;
+								margin-left: auto;
+								text-align: center;
+
+								.tyb-progress-bar {
+									height: 2.5rem;
+									background-color: #213f9a;
+									-ms-transition: all 1.2s ease;
+									-webkit-transition: all 1.2s ease;
+									-moz-transition: all 1.2s ease;
+									-o-transition: all 1.2s ease;
+									transition: all 1.2s ease;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+	.tyb-home-container {
+
+		.tyb-home-hero-section {
+
+			.tyb-home-hero-text {
+
+				margin: -3.0rem auto auto auto;
+
+				h1:first-child:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -34px;
+					height: 148px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					width: 149px;
+					content: "";
+					margin-top: -20.0rem;
+					left: 50%;
+					margin-left: -74.5px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 
 }

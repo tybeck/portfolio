@@ -11,7 +11,7 @@ var find = require('findit'),
 /**
  * Get directories based on past given in return all top level
  * directories within parent.
- * @property getDirs
+ * @method getDirs
  * @type Function
  */
 
@@ -59,7 +59,7 @@ module.exports.getDirs = getDirs = function (dir) {
 
 /**
  * Get projects based on a particular directory.
- * @property getProjects
+ * @method getProjects
  * @type Function
  */
 

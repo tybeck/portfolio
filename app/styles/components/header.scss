@@ -6,10 +6,20 @@ div.tyb-site-header-container {
 	height: 65px;
 	z-index: 1;
 
-	header { 
+	header {
+
+		div.one-third.column {
+			width: 5.6666666667%;
+		}
+
+		div.offset-by-two.six.columns {
+			margin-left: 9%;
+			width: 84.3333333333%;
+		}
+
 		div.row {
 
-			margin-top: 22px;
+			margin-top: 2.2rem;
 
 			a.tyb-site-news {
 
@@ -18,19 +28,23 @@ div.tyb-site-header-container {
 				background: url('../images/sprite.png');
 				background-repeat: no-repeat;
 				background-position: 0px 2px;
-				padding-left: 30px;
+				padding-left: 3.0rem;
 				width: 85px;
 				height: 25px;
 				display: inline-block;
+				font-size: 0;
+				vertical-align: top;
 
 				span {
 					color: #a9baed;
 					margin-right: 4px;
+					font-size: 0;
 				}
 
 			}
 
 		}
+
 	}
 
 	nav {
@@ -44,15 +58,22 @@ div.tyb-site-header-container {
 			li {
 
 				display: inline-block;
-				margin-right: 15px;
-				margin-left: 15px;
 				width: auto;
+
+				&.tyb-about-me-link,
+				&.tyb-portfolio-link,
+				&.tyb-contact-us-link {
+					display: none;
+				}
 
 				&.tyb-portfolio-work,
 				&.tyb-contact-link,
 				&.tyb-about-link {
-					display: none;
+					display: inline-block;
 				}
+
+				margin-right: 0.3rem;
+				margin-left: 0.3rem;
 
 				a {
 					color: #FFF;
@@ -84,40 +105,20 @@ div.tyb-site-header-block {
 
 }
 
-/* iPhone  */
-
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
+	and (max-width: 375px) {
 
 	div.tyb-site-header-container {
 
 		header.container {
 
-			div.row {
-
-				a.tyb-site-news {
-
-					font-size: 0;
-					vertical-align: top;
-
-					span {
-						font-size: 0;
-					}
-
-				}
-
-			}
-
 			div.one-third.column {
-				width: 8.6666666667%;
+				width: 2.6666666667%;
 			}
 
 			div.offset-by-two.six.columns {
-				margin-left: 9%;
-				width: 81.3333333333%;
+				margin-left: 10%;
+				width: 87.3333333333%;
 			}
 
 		}
@@ -128,20 +129,8 @@ div.tyb-site-header-block {
 
 				li {
 
-					&.tyb-about-me-link,
-					&.tyb-portfolio-link,
-					&.tyb-contact-us-link {
-						display: none;
-					}
-
-					&.tyb-portfolio-work,
-					&.tyb-contact-link,
-					&.tyb-about-link {
-						display: inline-block;
-					}
-
-					margin-right: 3px;
-					margin-left: 3px;
+					margin-right: 0.3rem;
+					margin-left: 0.3rem;
 
 				}
 
@@ -154,10 +143,8 @@ div.tyb-site-header-block {
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
+	and (max-width: 767px)
+	and (orientation: landscape) { 
 
 	div.tyb-site-header-container {
 
@@ -165,6 +152,84 @@ div.tyb-site-header-block {
 
 			div.one-third.column {
 				width: 8.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 16%;
+				width: 74.3333333333%;
+			}
+
+		}
+
+		nav {
+
+			ul {
+
+				li {
+
+					margin-right: 1rem;
+					margin-left: 1rem;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen 
+	and (min-width: 550px)
+	and (max-width: 619px) {
+
+	div.tyb-site-header-container {
+
+		header.container {
+
+			div.one-third.column {
+				width: 2.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 6%;
+				width: 91.3333333333%;
+			}
+
+		}
+
+		nav {
+
+			ul {
+
+				li {
+
+					margin-right: 1rem;
+					margin-left: 1rem;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape) {
+
+	div.tyb-site-header-container {
+
+		header.container {
+
+			div.one-third.column {
+				width: 5.6666666667%;
 			}
 
 			div.offset-by-two.six.columns {
@@ -180,20 +245,8 @@ div.tyb-site-header-block {
 
 				li {
 
-					&.tyb-about-me-link,
-					&.tyb-portfolio-link,
-					&.tyb-contact-us-link {
-						display: none;
-					}
-
-					&.tyb-portfolio-work,
-					&.tyb-contact-link,
-					&.tyb-about-link {
-						display: inline-block;
-					}
-
-					margin-right: 11px;
-					margin-left: 11px;
+					margin-right: 1.1rem;
+					margin-left: 1.1rem;
 
 				}
 
@@ -205,12 +258,53 @@ div.tyb-site-header-block {
 
 }
 
-/* iPad  */
-
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) {
+	and (min-device-width: 360px) 
+	and (max-device-width: 640px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: landscape) { 
+
+	div.tyb-site-header-container {
+
+		height: 55px;
+
+		header.container {
+
+			div.row {
+
+				margin-top: 1.8rem;
+
+			}
+
+			div.one-third.column {
+				width: 8.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 15%;
+				width: 75.3333333333%;
+			}
+
+		}
+
+	}
+
+	div.tyb-site-header-block {
+
+		height: 55px;
+
+		.tyb-site-selected-source {
+			top: 55px;
+		}
+
+	}
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+	and (orientation: portrait) {
 
 	div.tyb-site-header-container {
 
@@ -225,6 +319,20 @@ div.tyb-site-header-block {
 				width: 72.3333333333%;
 			}
 
+			div.row {
+
+				a.tyb-site-news {
+					
+					font-size: 1.5rem;
+					
+					span {
+						font-size: 1.5rem;
+					}
+
+				}
+
+			}
+
 		}
 
 		nav {
@@ -233,8 +341,8 @@ div.tyb-site-header-block {
 
 				li {
 
-					margin-right: 10px;
-					margin-left: 10px;
+					margin-right: 1rem;
+					margin-left: 1rem;
 
 				}
 
@@ -246,10 +354,8 @@ div.tyb-site-header-block {
 
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) {
+@media (min-width: 768px)
+	and (orientation: landscape) {
 
 	div.tyb-site-header-container {
 
@@ -260,8 +366,22 @@ div.tyb-site-header-block {
 			}
 
 			div.offset-by-two.six.columns {
-				margin-left: 12.3333333333%;
-				width: 53%;
+				margin-left: 10.3333333333%;
+				width: 55%;
+			}
+
+			div.row {
+
+				a.tyb-site-news {
+					
+					font-size: 1.5rem;
+					
+					span {
+						font-size: 1.5rem;
+					}
+
+				}
+
 			}
 
 		}
@@ -272,13 +392,143 @@ div.tyb-site-header-block {
 
 				li {
 
-					margin-right: 10px;
-					margin-left: 10px;
+					margin-right: 1rem;
+					margin-left: 1rem;
 
 				}
 
 			}
 
+		}
+
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+	div.tyb-site-header-container {
+
+		header.container {
+
+			div.one-third.column {
+				width: 30.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 17.3333333333%;
+				width: 48%;
+			}
+
+		}
+
+	}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	div.tyb-site-header-container {
+
+		width: 100%;
+		position: absolute;
+		display: block;
+		height: 65px;
+		z-index: 1;
+
+		header {
+
+			div.one-third.column {
+				width: 30.6666666667%;
+			}
+
+			div.offset-by-two.six.columns {
+				margin-left: 12.3333333333%;
+				width: 53%;
+			}
+
+			div.row {
+
+				margin-top: 2.2rem;
+
+				a.tyb-site-news {
+
+					color: #FFF;
+					text-transform: uppercase;
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px 2px;
+					padding-left: 3.0rem;
+					width: 85px;
+					height: 25px;
+					display: inline-block;
+
+					span {
+						color: #a9baed;
+						margin-right: 0.4rem;
+					}
+
+				}
+
+			}
+
+		}
+
+		nav {
+
+			ul {
+
+				list-style: none;
+				list-style-type: none;
+				vertical-align: top;
+
+				li {
+
+					display: inline-block;
+					margin-right: 1.5rem;
+					margin-left: 1.5rem;
+					width: auto;
+
+					&.tyb-portfolio-work,
+					&.tyb-contact-link,
+					&.tyb-about-link {
+						display: none;
+					}
+
+					&.tyb-about-me-link,
+					&.tyb-portfolio-link,
+					&.tyb-contact-us-link {
+						display: inline-block;
+					}
+
+					a {
+						color: #FFF;
+						text-transform: uppercase;
+					}
+
+				}
+			}
+		}
+
+	}
+
+	div.tyb-site-header-block {
+
+		width: 100%;
+		border-top: 5px solid #213F9A;
+		border-bottom: 1px solid #434549;
+		position: absolute;
+		display: block;
+		height: 65px;
+		z-index: 1;
+
+		.tyb-site-selected-source {
+			top: 65px;
+			position: absolute;
+			background-color: #FFF;
+			height: 1px;
 		}
 
 	}

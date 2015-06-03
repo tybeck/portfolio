@@ -177,7 +177,7 @@ var Server = {
 
 	/**
 	 * Message System
-	 * @property msg
+	 * @method msg
 	 * @type Function
 	 */
 
@@ -191,7 +191,7 @@ var Server = {
 
 	/**
 	 * Setup primary application.
-	 * @property setup
+	 * @method setup
 	 * @type Function
 	 */
 
@@ -215,10 +215,44 @@ var Server = {
 		return this;
 
 	},
+
+	/**
+	 * Setup our database.
+	 * @method database
+	 * @type Function
+	 */
+
+	database: function () {
+
+		var connection = require('./services/db'),
+
+			self = this;
+
+		connection.setup().then(function (status) {
+
+			if(status) {
+
+				console.log('Database connection established!');
+
+				self.listen();
+
+			} else {
+
+				console.log('Could not establish database connection!');
+
+				process.exit(0);
+
+			}
+
+		});
+
+		return this;
+
+	},
 	
 	/**
 	 * Setup our projects.
-	 * @property setupProjects
+	 * @method setupProjects
 	 * @type Function
 	 */
 
@@ -259,7 +293,7 @@ var Server = {
 				});
 
 				self.routes()
-					.listen();
+					.database();
 
 			});
 
@@ -269,7 +303,7 @@ var Server = {
 
 	/**
 	 * Setup our routes.
-	 * @property routes
+	 * @method routes
 	 * @type Function
 	 */
 
@@ -285,7 +319,7 @@ var Server = {
 
 	/**
 	 * Start listening
-	 * @property listen
+	 * @method listen
 	 * @type Function
 	 */
 
@@ -310,7 +344,7 @@ var Server = {
 
 	/**
 	 * Run primary application.
-	 * @property run
+	 * @method run
 	 * @type Function
 	 */
 

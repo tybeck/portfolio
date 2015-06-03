@@ -1,0 +1,36 @@
+[{
+	"project": {
+		"name": "Sony",
+		"logoLabel": "images/projects/sony/sony-logo.png",
+		"skills": ["HTML", "Javascript", "CSS", "Java"],
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pharetra magna, nec finibus risus. Ut semper condimentum urna, quis finibus nunc imperdiet vitae. Praesent ut lorem suscipit, imperdiet metus sit amet, suscipit purus. Fusce tempus pharetra felis, et rhoncus metus rutrum at. Etiam urna quam, rutrum nec justo id, varius convallis lectus. Ut suscipit nec justo semper volutpat. Integer hendrerit dolor sed pellentesque facilisis. Aenean molestie, mi varius dictum tincidunt, arcu eros luctus massa, id blandit ex erat vel nibh. Cras vitae porta metus. In cursus porta arcu non elementum. Pellentesque lobortis finibus nibh, quis dictum nibh.",
+		"link": "http://store.sony.com/",
+		"backdrop": "images/projects/sony/backdrop.png",
+		"view": "images/projects/sony/sony-view.png",
+		"zoom": "images/projects/sony/sony-zoom.png",
+		"carousel": "images/projects/sony/sony-carousel.png",
+		"carouselView": "laptop"
+	}
+}, {
+	"name": "Petsmart",
+	"logoLabel": "images/projects/petsmart/petsmart-logo.png",
+	"skills": ["HTML", "Javascript", "CSS", "Java"],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pharetra magna, nec finibus risus. Ut semper condimentum urna, quis finibus nunc imperdiet vitae. Praesent ut lorem suscipit, imperdiet metus sit amet, suscipit purus. Fusce tempus pharetra felis, et rhoncus metus rutrum at. Etiam urna quam, rutrum nec justo id, varius convallis lectus. Ut suscipit nec justo semper volutpat. Integer hendrerit dolor sed pellentesque facilisis. Aenean molestie, mi varius dictum tincidunt, arcu eros luctus massa, id blandit ex erat vel nibh. Cras vitae porta metus. In cursus porta arcu non elementum. Pellentesque lobortis finibus nibh, quis dictum nibh.",
+	"link": "http://www.petsmart.com/",
+	"backdrop": "images/projects/petsmart/backdrop.png",
+	"view": "images/projects/petsmart/petsmart-view.png",
+	"zoom": "images/projects/petsmart/petsmart-zoom.png",
+	"carousel": "images/projects/petsmart/petsmart-carousel.png",
+	"carouselView": "tablet"
+}, {
+	"name": "Steinmart",
+	"logoLabel": "images/projects/steinmart/steinmart-logo.png",
+	"skills": ["HTML", "Javascript", "AngularJS", "Sass", "Java"],
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pharetra magna, nec finibus risus. Ut semper condimentum urna, quis finibus nunc imperdiet vitae. Praesent ut lorem suscipit, imperdiet metus sit amet, suscipit purus. Fusce tempus pharetra felis, et rhoncus metus rutrum at. Etiam urna quam, rutrum nec justo id, varius convallis lectus. Ut suscipit nec justo semper volutpat. Integer hendrerit dolor sed pellentesque facilisis. Aenean molestie, mi varius dictum tincidunt, arcu eros luctus massa, id blandit ex erat vel nibh. Cras vitae porta metus. In cursus porta arcu non elementum. Pellentesque lobortis finibus nibh, quis dictum nibh.",
+	"link": "http://www.steinmart.com/",
+	"backdrop": "images/projects/steinmart/backdrop.png",
+	"view": "images/projects/steinmart/steinmart-view.png",
+	"zoom": "images/projects/steinmart/steinmart-zoom.png",
+	"carousel": "images/projects/steinmart/steinmart-carousel.png",
+	"carouselView": "phone"
+}]

@@ -308,12 +308,14 @@ module.exports = function (grunt) {
               {
 
                 'expand': true,
+
+                'dot': true,
             
                 'cwd': '<%= paths.app %>/<%= paths.images %>/',
             
                 'dest': '<%= paths.dist %>/<%= paths.images %>/',
             
-                'src': '{,*/}*.*'
+                'src': '*/**/*.{webp,gif,png,jpg}'
 
               }
 
