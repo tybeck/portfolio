@@ -19,7 +19,7 @@ angular.module('tyb')
 				$http.get($interpolate(PROJECTS_BY_NAME)(context))
 					.success(function (data) {
 
-						console.log(data);
+						d.resolve(data);
 
 				});
 

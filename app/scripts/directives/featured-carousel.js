@@ -9,7 +9,7 @@
  
 angular.module('tyb')
 
-    .directive('featuredCarousel', function (Projects) {
+    .directive('featuredCarousel', function (Projects, PROJECTS_LOAD_FEATURED) {
 
         return {
 
@@ -21,12 +21,12 @@ angular.module('tyb')
 
             'scope': true,
 
-            link: function () {
+            controller: function ($scope) {
 
-                Projects.getProjectsByName(['steinmart', 'petsmart', 'sony'])
-                    .then(function () {
+                Projects.getProjectsByName(PROJECTS_LOAD_FEATURED)
+                    .then(function (data) {
 
-                        
+                        $scope.featuredProjects = data.projects;
 
                 });
 

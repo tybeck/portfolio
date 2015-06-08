@@ -1,4 +1,5 @@
 {
     "ENV": "production",
-    "PROJECTS_BY_NAME": "/api/projects?names={{names}}"
+    "PROJECTS_BY_NAME": "/api/projects?names={{names}}",
+    "PROJECTS_LOAD_FEATURED": "steinmart,petsmart,sony"
 }

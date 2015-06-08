@@ -10,6 +10,14 @@
 
 angular.module('tyb')
 
-    .controller('AppCtrl', function () {
+    .controller('AppCtrl', function ($scope) {
 
+    	$scope.$on('tyb.resize', function (ev, size) {
+
+    		var main = angular.element(document.getElementById('main'));
+
+    		main.css('height', size.h + 'px');
+
+    	});
+    	
     });

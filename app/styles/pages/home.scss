@@ -200,6 +200,455 @@
 
 	}
 
+	.tyb-portfolio-container {
+
+		a.tyb-portfolio-link-button {
+			display: inline-block;
+			margin-bottom: 6.0rem;
+		}
+
+		.tyb-featured-carousel-container {
+			
+			background: url('../images/bg-carousel.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			text-align: center;
+			position: relative;
+			height: 41rem;
+
+			ul.tyb-featured-carousel-list {
+
+				height: 100%;
+
+			}
+
+		}
+
+	}
+
+	.tyb-clients-container,
+	.tyb-home-help-container {
+
+		background: url('../images/bg-clients.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		text-align: center;
+		position: relative;
+		margin-top: 6rem;
+		height: 55rem;
+		color: #FFF;
+
+		div.container {
+
+			position: relative;
+			height: 100%;
+
+			div.tyb-center-middle {
+
+				position: absolute;
+				margin: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				width: 100%;
+
+				h2 {
+
+					text-transform: uppercase;
+					font-family: "roboto_condensedbold";
+					letter-spacing: 0.7rem;
+
+					span {
+						font-family: "roboto_condensedlight";
+					}
+
+				}
+
+				ul {
+
+					margin-left: auto;
+					margin-right: auto;
+					text-align: center;
+					margin-top: 9rem;
+					margin-bottom: 9rem;
+
+					li {
+
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 4rem;
+
+						&.tyb-icon-sony {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px 0px;
+							height: 37px;
+							width: 205px;
+						}
+
+						&.tyb-icon-steinmart {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -52px;
+							height: 67px;
+							width: 221px;
+						}
+
+						&.tyb-icon-ebay {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -255px;
+							height: 63px;
+							width: 166px;
+						}
+
+						&.tyb-icon-petsmart {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -143px;
+							height: 49px;
+							width: 205px;
+						}
+
+						&.tyb-icon-reactor {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -211px;
+							height: 24px;
+							width: 192px;
+						}
+
+					}
+
+					li:last-child {
+						margin-right: 0;
+					}
+
+				}
+
+				p {
+					width: 75%;
+					font-size: 1.4rem;
+					line-height: 3.35rem;
+					letter-spacing: 0.07rem;
+					margin-left: auto;
+					margin-right: auto;
+					text-align: center;
+					margin-bottom: 0;
+					color: #5e5f64;
+				}
+
+			}
+
+		}
+
+	}
+
+	.tyb-home-help-container {
+
+		background: url('../images/bg-contact.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		text-align: center;
+		position: relative;
+		margin-top: 6rem;
+		height: 65rem;
+		color: #FFF;
+
+		div.container {
+
+			div.tyb-center-middle {
+
+				h2 {
+
+					text-transform: uppercase;
+					font-family: "roboto_condensedbold";
+					letter-spacing: 0.3rem;
+					font-size: 5.3rem;
+
+					span {
+						font-family: "roboto_condensedlight";
+					}
+
+					span.tyb-friends {
+						font-size: 3.3rem;
+						display: block;
+						margin-top: 2rem;
+					}
+
+				}
+
+				form {
+
+					display: block;
+					margin-top: 3rem;
+
+					div.container {
+
+						margin-top: 3rem;
+						margin-bottom: 3rem;
+
+						.tyb-field {
+
+							text-align: left;
+
+							&.needs {
+
+								label {
+									display: inline-block;
+									font-family: "roboto_condensedlight";
+									text-transform: uppercase;
+									width: 10rem;
+									vertical-align: middle;
+									font-size: 2.4rem;
+									letter-spacing: 0.2rem;
+									color: #959596;
+								}
+								
+								select {
+									display: inline-block;
+									width: 32.5rem;
+									-webkit-appearance: none;
+									-moz-appearance: none;
+									appearance: none;
+									border-radius: 0;
+									color: #959596;
+									background-color: transparent;
+									border-top: none;
+									border-left: none;
+									border-right: none;
+									border-bottom: 1px solid #959596;
+								}
+
+							}
+
+							input[type="text"] {
+								color: #959596;
+								background-color: transparent;
+								border-top: none;
+								border-left: none;
+								border-right: none;
+								border-bottom: 1px solid #959596;
+								-webkit-appearance: none;
+								-moz-appearance: none;
+								appearance: none;
+								border-radius: 0;
+								width: 100%;
+							}
+
+							input[type="submit"] {
+								color: #FFF;
+								font-size: 2em;
+								padding: 7px 21px 7px 21px;
+								height: auto;
+							}
+
+						}
+
+					}
+
+					div.container:first-child {
+						margin-top: 10rem;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.tyb-connections-container {
+
+		margin-top: 10rem;
+
+		h2 {
+
+			text-transform: uppercase;
+			font-family: "roboto_condensedbold";
+			letter-spacing: 0.5rem;
+
+			span {
+				font-family: "roboto_condensedlight";
+			}
+
+		}
+
+		ul {
+
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			margin-top: 9rem;
+			margin-bottom: 9rem;
+
+			li {
+
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 9rem;
+
+				a {
+
+					display: block;
+					height: 128px;
+					width: 128px;
+
+					&.tyb-connection-facebook {
+						background: url('../images/sprite.png');
+						background-repeat: no-repeat;
+						background-position: 0px -613px;
+					}
+
+					&.tyb-connection-linkedin {
+						background: url('../images/sprite.png');
+						background-repeat: no-repeat;
+						background-position: -141px -612px;
+					}
+
+					&.tyb-connection-twitter {
+						background: url('../images/sprite.png');
+						background-repeat: no-repeat;
+						background-position: -281px -612px;
+					}
+
+					&.tyb-connection-google {
+						background: url('../images/sprite.png');
+						background-repeat: no-repeat;
+						background-position: -425px -613px;
+					}
+
+				}
+
+			}
+
+			li:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+		p {
+			font-size: 1.9rem;
+			font-family: "roboto_condensedlight";
+			color: #3E3E3E;
+			width: 100%;
+			display: block;
+			line-height: 3.35rem;
+			letter-spacing: 0.04rem;
+		}
+
+	}
+
+	.tyb-my-services {
+
+		margin-top: 9rem;
+
+		h2 {
+
+			text-transform: uppercase;
+			font-family: "roboto_condensedlight";
+			letter-spacing: 0.7rem;
+
+			span {
+				font-family: "roboto_condensedbold";
+			}
+
+		}
+
+		ul {
+
+			width: 100%;
+			list-style: none;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			margin-top: 6.0rem;
+
+			li {
+
+				h3 {
+
+					font-size: 2rem;
+					font-family: "roboto_condensedbold";
+					letter-spacing: 0.05rem;
+				
+					span {
+						font-family: "roboto_condensedlight";
+					}
+
+				}
+
+				p {
+					line-height: 1.9rem;
+				}
+
+				&.tyb-digital-marketing {
+
+					h3:before {
+						content: "";
+						display: block;
+						background: url("../images/sprite.png");
+						background-position: -341px -168px;
+						width: 138px;
+						background-repeat: no-repeat;
+						margin-left: auto;
+						margin-bottom: 2.0rem;
+						height: 116px;
+						margin-right: auto;
+						text-align: center;
+					}
+
+				}
+
+				&.tyb-web-development {
+
+					h3:before {
+						content: "";
+						display: block;
+						background: url("../images/sprite.png");
+						background-position: -162px -168px;
+						width: 145px;
+						background-repeat: no-repeat;
+						margin-left: auto;
+						margin-bottom: 2.0rem;
+						height: 105px;
+						margin-right: auto;
+						text-align: center;
+					}
+
+				}
+
+				&.tyb-mobile-apps {
+
+					h3:before {
+						content: "";
+						display: block;
+						background: url("../images/sprite.png");
+						background-position: -162px -292px;
+						width: 134px;
+						background-repeat: no-repeat;
+						margin-left: auto;
+						margin-bottom: 2.0rem;
+						height: 111px;
+						margin-right: auto;
+						text-align: center;
+					}
+
+				}
+
+				width: 32.75%;
+				display: inline-block;
+
+			}
+		
+		}
+
+	}
+
 }
 
 @media only screen 
@@ -641,6 +1090,16 @@
 					}
 
 				}
+
+			}
+
+		}
+
+		.tyb-portfolio-container {
+
+			.tyb-featured-carousel-container {
+
+				height: 82rem;
 
 			}
 

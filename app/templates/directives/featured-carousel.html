@@ -1,1 +1,28 @@
-<div></div>
+<div class="tyb-featured-carousel-container">
+	
+	<ul
+		rn-carousel
+		rn-carousel-controls
+		rn-carousel-index="1"
+		class="tyb-featured-carousel-list"
+	>
+	  <li ng-repeat="project in featuredProjects">
+	  	<div class="tyb-project-container">
+		  	<div class="prj phone" ng-if="project.carouselView == 'phone'">
+
+		  	</div>
+		  	<div class="prj tablet" ng-if="project.carouselView == 'tablet'">
+		  		<div class="device-container">
+		  			<img ng-src="{{project.carousel}}" alt="" />
+		  		</div>
+		  		<h2>{{project.carouselTitle}}</h2>
+		  		<description-shortener desc="project.description" limit="150"></description-shortener>
+		  	</div>
+		  	<div class="prj laptop" ng-if="project.carouselView == 'laptop'">
+
+		  	</div>
+	  	</div>
+	  </li>
+	</ul>
+
+</div>

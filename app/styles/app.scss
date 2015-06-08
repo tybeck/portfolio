@@ -4,8 +4,12 @@
 @import "libs/skeleton";
 
 @import "components/header";
+@import "components/footer";
+
+@import "directives/featured-carousel";
 
 @import "pages/home";
+@import "pages/about-me";
 
 @import "global";
 @import "fonts";
