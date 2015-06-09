@@ -9,7 +9,11 @@
 	  <li ng-repeat="project in featuredProjects">
 	  	<div class="tyb-project-container">
 		  	<div class="prj phone" ng-if="project.carouselView == 'phone'">
-
+		  		<div class="device-container">
+		  			<img ng-src="{{project.carousel}}" alt="" />
+		  		</div>
+		  		<h2>{{project.carouselTitle}}</h2>
+		  		<description-shortener desc="project.description" limit="150"></description-shortener>
 		  	</div>
 		  	<div class="prj tablet" ng-if="project.carouselView == 'tablet'">
 		  		<div class="device-container">
@@ -19,7 +23,11 @@
 		  		<description-shortener desc="project.description" limit="150"></description-shortener>
 		  	</div>
 		  	<div class="prj laptop" ng-if="project.carouselView == 'laptop'">
-
+		  		<div class="device-container">
+		  			<img ng-src="{{project.carousel}}" alt="" />
+		  		</div>
+		  		<h2>{{project.carouselTitle}}</h2>
+		  		<description-shortener desc="project.description" limit="150"></description-shortener>
 		  	</div>
 	  	</div>
 	  </li>

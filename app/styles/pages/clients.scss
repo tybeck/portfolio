@@ -1,0 +1,253 @@
+.tyb-clients-container {
+
+	height: 100%;
+
+	.tyb-clients-hero-section {
+		
+		background-size: cover;
+		background-position: center bottom;
+		background-image: url('../images/bg-clients-page.png');
+		text-align: center;
+		position: relative;
+		height: 100%;
+		top: 0;
+
+		.tyb-clients-hero-wrapper {
+			
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center 8rem;
+			color: #FFF;
+
+			div.container {
+
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				div.wrapper {
+					
+					position: absolute;
+					margin: 0;
+					top: 50%;
+					transform: translate(0, -50%);
+					width: 100%;
+					text-align: justify;
+
+					h1 {
+						font-family: "roboto_condensedbold";
+						text-transform: uppercase;
+						margin-left: auto;
+						opacity: .6;
+						margin-right: auto;
+						text-align: center;
+						color: #FFF;
+						font-size: 4rem;
+						margin-top: 5rem;
+						letter-spacing: .2rem;
+					}
+
+					p {
+						letter-spacing: 0.1rem;
+						line-height: 3rem;
+					}
+
+					.tyb-clients-carousel-list {
+
+						height: 18.5rem;
+						margin-top: 5rem;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-o-user-select: none; 
+						user-select: none;
+
+						li {
+							vertical-align: middle;
+						}
+
+						.tyb-icon-container {
+
+							position: relative;
+							height: 100%;
+
+							div.tyb-icon-wrapper {
+
+								position: absolute;
+								margin: 0;
+								top: 50%;
+								-webkit-transform: translate(0, -50%);
+								transform: translate(0, -50%);
+								color: #FFF;
+								width: 100%;
+
+								div.tyb-icon-content {
+
+									margin-left: auto;
+									margin-right: auto;
+									text-align: center;
+
+									div.tyb-icon-item {
+
+										display: inline-block;
+										vertical-align: middle;
+										border: .45rem solid #FFF;
+										margin: 0 3rem;
+										padding: 5rem;
+
+									}
+
+									div.tyb-icon-item:first-child {
+										margin-left: 0;
+									}
+
+									div.tyb-icon-item:last-child {
+										margin-right: 0;
+									}								
+
+								}
+
+							}
+
+						}
+
+						.tyb-icon-sony {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px 0px;
+							height: 37px;
+							width: 205px;
+						}
+
+						.tyb-icon-steinmart {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -52px;
+							height: 67px;
+							width: 221px;
+						}
+
+						.tyb-icon-ebay {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -255px;
+							height: 63px;
+							width: 166px;
+						}
+
+						.tyb-icon-petsmart {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -143px;
+							height: 49px;
+							width: 205px;
+						}
+
+						.tyb-icon-reactor {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -211px;
+							height: 24px;
+							width: 192px;
+						}
+
+						.tyb-icon-uniqlo {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -334px;
+							height: 50px;
+							width: 198px;
+						}
+
+						.tyb-icon-spanx {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -397px;
+							height: 50px;
+							width: 287px;
+						}
+
+						.tyb-icon-toysrus {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -463px;
+							height: 69px;
+							width: 275px;
+						}
+
+						.tyb-icon-bbw {
+							background: url('../images/logos.png');
+							background-repeat: no-repeat;
+							background-position: 0px -614px;
+							height: 30px;
+							width: 292px;
+						}
+
+					}
+
+					.rn-carousel-controls {
+
+						.rn-carousel-control-prev {
+							background: url("../images/sprite.png");
+							background-repeat: no-repeat;
+							background-position: -293px 0px;
+							display: block;
+							width: 60px;
+							height: 138px;
+							top: 50%;
+							-webkit-transform: translate(0, -50%);
+							transform: translate(0, -50%);
+						}
+
+						.rn-carousel-control-prev:hover {
+							background-position: -162px 0px;
+						}
+
+						.rn-carousel-control-next {
+							background: url("../images/sprite.png");
+							background-repeat: no-repeat;
+							background-position: -359px 0px;
+							display: block;
+							width: 60px;
+							height: 138px;
+							top: 50%;
+							-webkit-transform: translate(0, -50%);
+							transform: translate(0, -50%);
+						}
+
+						.rn-carousel-control-next:before,
+						.rn-carousel-control-prev:before {
+							content: "";
+						}
+
+						.rn-carousel-control-next:hover {
+							background-position: -227px 0px;
+						}
+
+					}
+
+				}
+
+				div.wrapper:before {
+					background: url('../images/sprite.png');
+					background-repeat: no-repeat;
+					background-position: 0px -34px;
+					height: 148px;
+					display: block;
+					text-align: center;
+					position: absolute;
+					width: 149px;
+					content: "";
+					margin-top: -20.0rem;
+					left: 50%;
+					margin-left: -74.5px;
+				}
+
+			}
+
+		}
+
+	}
+
+}

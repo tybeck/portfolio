@@ -16,6 +16,49 @@
 				color: #FFF;
 				width: 100%;
 
+				&.phone {
+
+					.device-container {
+
+						background: url('../images/phone-layout.png');
+						background-repeat: no-repeat;
+						text-align: center;
+						display: block;
+						height: 403px;
+						width: 193px;
+						content: "";
+						margin-left: auto;
+						margin-right: auto;
+						text-align: center;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-o-user-select: none; 
+						user-select: none;
+
+						img {
+							margin-top: 60px;
+							margin-left: 3px;
+						}
+
+					}
+
+					h2 {
+						text-transform: uppercase;
+						font-family: "roboto_condensedbold";
+						letter-spacing: 0.25rem;
+						font-size: 3rem;
+						margin-top: 2rem;
+					}
+
+					p {
+						width: 630px;
+						margin: auto;
+						text-align: center;
+					}
+
+				}
+
 				&.tablet {
 
 					.device-container {
@@ -30,9 +73,56 @@
 						margin-left: auto;
 						margin-right: auto;
 						text-align: center;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-o-user-select: none; 
+						user-select: none;
 
 						img {
 							margin-top: 31px;
+						}
+
+					}
+
+					h2 {
+						text-transform: uppercase;
+						font-family: "roboto_condensedbold";
+						letter-spacing: 0.25rem;
+						font-size: 3rem;
+						margin-top: 2rem;
+					}
+
+					p {
+						width: 630px;
+						margin: auto;
+						text-align: center;
+					}
+
+				}
+
+				&.laptop {
+
+					.device-container {
+
+						background: url('../images/laptop-outline.png');
+						background-repeat: no-repeat;
+						text-align: center;
+						display: block;
+						height: 494px;
+						width: 851px;
+						content: "";
+						margin-left: auto;
+						margin-right: auto;
+						text-align: center;
+						-webkit-user-select: none;
+						-khtml-user-select: none;
+						-moz-user-select: none;
+						-o-user-select: none; 
+						user-select: none;
+						
+						img {
+							margin-top: 35px;
 						}
 
 					}
