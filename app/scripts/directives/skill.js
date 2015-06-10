@@ -25,7 +25,9 @@ angular.module('tyb')
 
             	'type': '@',
 
-            	'typeExtra': '@'
+            	'typeExtra': '@',
+
+                'isHidden': '='
 
             },
 
@@ -56,26 +58,86 @@ angular.module('tyb')
 
             	scope.hasAnimated = false;
 
-            	$rootScope.$on('tyb.visibility', function () {
+                var visibility = function () {
 
-            		var el = element[0];
+                    var el = element[0];
 
-            		if(scope.isElementInViewport(el)) {
+                    if(scope.isElementInViewport(el) && !scope.hiddenStatus) {
 
-            			var elemBar = el.querySelector('.tyb-progress-bar');
+                        var elemBar = el.querySelector('.tyb-progress-bar');
 
-            			if(elemBar) {
+                        if(elemBar) {
 
-            				angular.element(elemBar)
-            					.css('width', scope.lvl);
+                            angular.element(elemBar)
+                                .css('width', scope.lvl);
 
-            			}
+                        }
 
-            			scope.hasAnimated = true;
+                        scope.hasAnimated = true;
 
-            		}
+                    }
 
-            	});
+                };
+
+                if(scope.isHidden) {
+
+                    var parent = null;
+
+                    angular.element(document).ready(function () {
+
+                        parent = element[0].parentNode;
+
+                        var computed = window.getComputedStyle(parent, null);
+
+                        angular.extend(scope, {
+
+                            'computedHeight': parent.offsetHeight,
+
+                            'computedMarginBottom': computed.getPropertyValue('margin-bottom'),
+
+                            'computedMarginTop': computed.getPropertyValue('margin-top'),
+
+                            'hiddenStatus': true
+
+                        });
+
+                        angular.extend(parent.style, {
+                            
+                            'height': '0rem',
+
+                            'overflow': 'hidden',
+
+                            'marginBottom': '0rem',
+
+                            'marginTop': '0rem'
+                        
+                        });
+
+                    });
+
+                    scope.$on('skills.seeMore', function () {
+
+                        angular.extend(parent.style, {
+                            
+                            'height': scope.computedHeight + 'px',
+
+                            'overflow': 'hidden',
+
+                            'marginBottom': scope.computedMarginBottom,
+
+                            'marginTop': scope.computedMarginTop
+                        
+                        });
+
+                        scope.hiddenStatus = false;
+
+                        visibility();
+
+                    });
+
+                }
+
+                $rootScope.$on('tyb.visibility', visibility);
 
             }
 

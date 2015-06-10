@@ -138,9 +138,15 @@
 
 		.tyb-skills-container {
 
+			&.tyb-see-more-active {
+				margin-bottom: 6rem;
+			}
+
 			ul {
 
 				list-style: none;
+				margin-bottom: 0;
+				margin-top: 6rem;
 
 				li {
 
@@ -152,7 +158,12 @@
 					text-transform: uppercase;
 					letter-spacing: 0.1rem;
 					margin-bottom: 3rem;
-					
+					-ms-transition: all 0.5s ease;
+					-webkit-transition: all 0.5s ease;
+					-moz-transition: all 0.5s ease;
+					-o-transition: all 0.5s ease;
+					transition: all 0.5s ease;
+
 					.tyb-skill {
 
 						> span {
@@ -196,6 +207,22 @@
 
 			}
 
+			div.tyb-see-more-link {
+				
+				color: #000;
+				text-transform: uppercase;
+				margin-bottom: 7rem;
+				font-size: 1.8rem;
+				margin-top: 0rem;
+				display: block;
+				cursor: pointer;
+
+				&:hover {
+					color: #0FA0CE;
+				}
+
+			}
+
 		}
 
 	}
@@ -227,8 +254,7 @@
 
 	}
 
-	.tyb-clients-container,
-	.tyb-home-help-container {
+	.tyb-clients-container {
 
 		background: url('../images/bg-clients.png');
 		background-repeat: no-repeat;
@@ -356,108 +382,6 @@
 		margin-top: 6rem;
 		height: 65rem;
 		color: #FFF;
-
-		div.container {
-
-			div.tyb-center-middle {
-
-				h2 {
-
-					text-transform: uppercase;
-					font-family: "roboto_condensedbold";
-					letter-spacing: 0.3rem;
-					font-size: 5.3rem;
-
-					span {
-						font-family: "roboto_condensedlight";
-					}
-
-					span.tyb-friends {
-						font-size: 3.3rem;
-						display: block;
-						margin-top: 2rem;
-					}
-
-				}
-
-				form {
-
-					display: block;
-					margin-top: 3rem;
-
-					div.container {
-
-						margin-top: 3rem;
-						margin-bottom: 3rem;
-
-						.tyb-field {
-
-							text-align: left;
-
-							&.needs {
-
-								label {
-									display: inline-block;
-									font-family: "roboto_condensedlight";
-									text-transform: uppercase;
-									width: 10rem;
-									vertical-align: middle;
-									font-size: 2.4rem;
-									letter-spacing: 0.2rem;
-									color: #959596;
-								}
-								
-								select {
-									display: inline-block;
-									width: 32.5rem;
-									-webkit-appearance: none;
-									-moz-appearance: none;
-									appearance: none;
-									border-radius: 0;
-									color: #959596;
-									background-color: transparent;
-									border-top: none;
-									border-left: none;
-									border-right: none;
-									border-bottom: 1px solid #959596;
-								}
-
-							}
-
-							input[type="text"] {
-								color: #959596;
-								background-color: transparent;
-								border-top: none;
-								border-left: none;
-								border-right: none;
-								border-bottom: 1px solid #959596;
-								-webkit-appearance: none;
-								-moz-appearance: none;
-								appearance: none;
-								border-radius: 0;
-								width: 100%;
-							}
-
-							input[type="submit"] {
-								color: #FFF;
-								font-size: 2em;
-								padding: 7px 21px 7px 21px;
-								height: auto;
-							}
-
-						}
-
-					}
-
-					div.container:first-child {
-						margin-top: 10rem;
-					}
-
-				}
-
-			}
-
-		}
 
 	}
 

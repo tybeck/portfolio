@@ -24,7 +24,7 @@
 
 		<a class="tyb-about-me-link-button tyb-link-button" href="#/about">More About Me</a>
 
-		<div class="tyb-skills-container">
+		<div class="tyb-skills-container" ng-class="{ 'tyb-see-more-active': seeMoreClicked }">
 
 			<ul>
 				<li>
@@ -37,7 +37,7 @@
 					<skill type="Node.js &amp; " type-extra="AngularJS" level="95"></skill>
 				</li>
 				<li>
-					<skill type="Java" level="82"></skill>
+					<skill type="Grunt &amp; " type-extra="Preprocessing" level="89"></skill>
 				</li>
 				<li>
 					<skill type="CSS" level="91"></skill>
@@ -45,7 +45,27 @@
 				<li>
 					<skill type="Web &amp; " type-extra="Mobile Development" level="90"></skill>
 				</li>
+				<li>
+					<skill type="MongoDB / " type-extra="SQL" level="84" is-hidden="true"></skill>
+				</li>
+				<li>
+					<skill type="E-commerce" type-extra="Systems" level="80" is-hidden="true">></skill>
+				</li>
+				<li>
+					<skill type="Shell &amp; " type-extra="Bash Scripting" level="88" is-hidden="true">></skill>
+				</li>
+				<li>
+					<skill type="ActionScript &amp; " type-extra="Flash" level="95" is-hidden="true">></skill>
+				</li>
+				<li>
+					<skill type="Java" level="80" is-hidden="true">></skill>
+				</li>
+				<li>
+					<skill type="PHP" level="91" is-hidden="true">></skill>
+				</li>
 			</ul>
+
+			<div class="tyb-see-more-link" ng-click="seeMore();" ng-if="!seeMoreClicked">See more...</div>
 
 		</div>
 

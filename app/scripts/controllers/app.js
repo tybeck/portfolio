@@ -10,7 +10,7 @@
 
 angular.module('tyb')
 
-    .controller('AppCtrl', function ($scope, $timeout) {
+    .controller('AppCtrl', function ($scope, $timeout, PageTitleTag) {
 
     	var getMainElement = function () {
 
@@ -45,5 +45,7 @@ angular.module('tyb')
 			});
 
     	});
+
+        $scope.pageTitleTag = new PageTitleTag();
     	
     });

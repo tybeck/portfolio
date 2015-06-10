@@ -10,6 +10,20 @@
 
 angular.module('tyb')
 
-    .controller('HomeCtrl', function () {
+    .controller('HomeCtrl', function ($scope) {
+
+    	angular.extend($scope, {
+
+    		'seeMoreClicked': false,
+
+    		seeMore: function () {
+
+    			$scope.seeMoreClicked = true;
+
+    			$scope.$broadcast('skills.seeMore');
+
+    		}
+
+    	});
 
     });
