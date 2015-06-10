@@ -20,7 +20,17 @@ angular.module('tyb')
 
                 url: '/',
 
-                templateUrl: 'templates/pages/home.html'
+                templateUrl: 'templates/pages/home.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.home');
+
+                    }
+
+                }
 
             })
 
@@ -28,7 +38,17 @@ angular.module('tyb')
 
                 url: '/home',
 
-                templateUrl: 'templates/pages/home.html'
+                templateUrl: 'templates/pages/home.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.home');
+
+                    }
+
+                }
 
             })
 
@@ -36,7 +56,17 @@ angular.module('tyb')
 
                 url: '/about',
 
-                templateUrl: 'templates/pages/about-me.html'
+                templateUrl: 'templates/pages/about-me.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.about');
+
+                    }
+
+                }
 
             })
 
@@ -52,7 +82,17 @@ angular.module('tyb')
 
                 url: '/clients',
 
-                templateUrl: 'templates/pages/clients.html'
+                templateUrl: 'templates/pages/clients.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.clients');
+
+                    }
+
+                }
 
             })
 
@@ -60,7 +100,17 @@ angular.module('tyb')
 
                 url: '/contact',
 
-                templateUrl: 'templates/pages/contact-me.html'
+                templateUrl: 'templates/pages/contact-me.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.contact');
+
+                    }
+
+                }
 
             });
 

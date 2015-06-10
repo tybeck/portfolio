@@ -1,5 +1,11 @@
 {
     "ENV": "production",
     "PROJECTS_BY_NAME": "/api/projects?names={{names}}",
-    "PROJECTS_LOAD_FEATURED": "steinmart,petsmart,sony"
+    "PROJECTS_LOAD_FEATURED": "steinmart,petsmart,sony",
+    "PRELOAD_ASSETS": {
+    	"app.home": ["images/sprite.png", "images/logos.png", "images/bg-showcase.png", "images/laptop-outline.png", "images/phone-layout.png", "images/tablet-outline.png", "images/bg-contact.png", "images/bg-carousel.png", "images/bg-clients.png"],
+    	"app.about": ["images/sprite.png", "images/logos.png", "images/bg-aboutme.png", "images/bg-map.png"],
+    	"app.clients": ["images/sprite.png", "images/logos.png", "images/bg-clients-page.png"],
+    	"app.contact": ["images/sprite.png", "images/bg-contacts-page.png"]
+    }
 }
