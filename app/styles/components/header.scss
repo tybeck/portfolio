@@ -529,6 +529,11 @@ div.tyb-site-header-block {
 			position: absolute;
 			background-color: #FFF;
 			height: 1px;
+			-ms-transition: all 1.2s ease;
+			-webkit-transition: all 1.2s ease;
+			-moz-transition: all 1.2s ease;
+			-o-transition: all 1.2s ease;
+			transition: all 1.2s ease;
 		}
 
 	}

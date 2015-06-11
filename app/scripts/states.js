@@ -74,7 +74,17 @@ angular.module('tyb')
 
                 url: '/portfolio',
 
-                templateUrl: 'templates/pages/portfolio.html'
+                templateUrl: 'templates/pages/portfolio.html',
+
+                resolve: {
+
+                    assets: function (Preloader) {
+                        
+                        return Preloader.getAssets('app.portfolio');
+
+                    }
+
+                }
 
             })
 

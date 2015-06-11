@@ -2,6 +2,140 @@
 
 	height: 100%;
 
+	.tyb-clients-main-content {
+
+		margin-top: 4.0rem;
+
+		h2:first-child {
+
+			text-transform: uppercase;
+			font-family: "roboto_condensedbold";
+			letter-spacing: 0.7rem;
+			font-size: 3em;
+			color: #000;
+
+			&:before {
+				height: 35px;
+				width: 1px;
+				background: #787878;
+				display: block;
+				content: "";
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 2.0rem;
+				text-align: center;
+			}
+
+		}
+
+		ul.tyb-clients-list {
+
+			list-style: none;
+			margin-top: 8rem;
+
+			li {
+
+				margin-bottom: 1rem;
+
+				div.wrapper {
+
+					display: inline-block;
+					vertical-align: top;
+					margin-left: auto;
+					margin-right: auto;
+					text-align: center;
+					border: .35rem solid #000;
+					padding: 1.8rem;
+					margin: 0.3rem;
+					min-width: 24.5rem;
+					min-height: 7rem;
+				
+					div.tyb-clients {
+
+						background: url('../images/logos.png');
+						background-repeat: no-repeat;
+						margin-left: auto;
+						margin-right: auto;
+						text-align: center;
+
+						&.tyb-clients-sony {
+							background-position: 0px -669px;
+							height: 37px;
+							width: 205px;
+							margin-top: 1.5rem;
+						}
+
+						&.tyb-clients-steinmart {
+							background-position: 0px -721px;
+							height: 67px;
+							width: 221px;
+						}
+
+						&.tyb-clients-petsmart {
+							background-position: 0px -812px;
+							height: 49px;
+							width: 205px;
+							margin-top: 0.5rem;
+						}
+
+						&.tyb-clients-reactorlabs {
+							background-position: 0px -878px;
+							height: 24px;
+							width: 192px;
+							margin-top: 2.0rem;
+						}
+
+						&.tyb-clients-ebay {
+							background-position: 0px -924px;
+							height: 63px;
+							width: 166px;
+
+						}
+
+						&.tyb-clients-uniqlo {
+							background-position: 0px -1003px;
+							height: 50px;
+							width: 199px;
+							margin-top: 1rem;
+						}
+
+						&.tyb-clients-spanx {
+							background-position: 0px -1066px;
+							height: 50px;
+							width: 287px;
+							margin-top: 0.9rem;
+						}
+
+						&.tyb-clients-toysrus {
+							background-position: 0px -1132px;
+							height: 69px;
+							width: 275px;
+						}
+
+						&.tyb-clients-cbk {
+							background-position: 0px -1216px;
+							height: 50px;
+							margin-top: 1rem;
+							width: 418px;
+						}
+
+						&.tyb-clients-bbw {
+							background-position: 0px -1283px;
+							height: 30px;
+							margin-top: 2rem;
+							width: 292px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
 	.tyb-clients-hero-section {
 		
 		background-size: cover;
