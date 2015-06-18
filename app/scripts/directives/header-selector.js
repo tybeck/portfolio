@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc directive
- * @name tyb.directive:header
+ * @name tyb.directive:headerSelector
  * @description
- * # header
+ * # headerSelector
  */
  
 angular.module('tyb')

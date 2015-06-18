@@ -1,19 +1,36 @@
-<div class="tyb-portfolio-container" resize half>
+<div class="tyb-portfolio-container" resize ng-controller="PortfolioCtrl">
 
 	<div class="tyb-portfolio-hero-section">
 		<div class="tyb-portfolio-hero-wrapper">
 			<div class="container">
-				<ul class="tyb-work-list">
-					<li>Web</li>
-					<li>Mobile</li>
-					<li>Deskop</li>
-				</ul>
+				<work-list list="workList"></work-list>
 			</div>
 		</div>
 	</div>
 
 	<div class="tyb-portfolio-main-content">
-		Main Content
+		<ul>
+			<li ng-repeat="project in workList">
+				<div class="tyb-project-wrapper" tyb-bg="project.backdrop">
+					<div class="container-large">
+						<div class="tyb-center-middle">
+							<div class="four columns">
+								<div tyb-bg="project.logoLabel" tyb-bg-width></div>
+								<p ng-bind="project.description"></p>
+								<ul class="tyb-skill-list">
+									<li ng-repeat="skill in project.skills" ng-bind="skill"></li>
+								</ul>
+							</div>
+							<div class="eight columns">
+								<div class="tyb-laptop">
+									<img src="{{project.view}}" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 
 	<footer-container></header-container>

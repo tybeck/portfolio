@@ -14,14 +14,12 @@
 
 		.tyb-contact-hero-wrapper {
 			
-			width: 100%;
 			height: 100%;
 			color: #FFF;
 
 			div.container {
 
 				position: relative;
-				width: 100%;
 				height: 100%;
 
 				div.wrapper {
@@ -30,8 +28,8 @@
 					margin: 0;
 					top: 50%;
 					transform: translate(0, -50%);
-					width: 100%;
 					text-align: justify;
+					width: 80%;
 
 					h1 {
 						font-family: "roboto_condensedbold";
@@ -62,8 +60,6 @@
 
 	text-align: center;
 	position: relative;
-	margin-top: 6rem;
-	height: 65rem;
 	color: #FFF;
 
 	div.container {
@@ -74,26 +70,25 @@
 		div.tyb-center-middle {
 
 			position: absolute;
-			margin: 0;
+			margin: 4rem 0 0 0;
 			top: 50%;
 			transform: translate(0, -50%);
-			width: 100%;
 
 			h2 {
 
 				text-transform: uppercase;
 				font-family: "roboto_condensedbold";
 				letter-spacing: 0.7rem;
-				font-size: 5.3rem;
+				font-size: 2.5rem;
 
 				span {
 					font-family: "roboto_condensedlight";
 				}
 
 				span.tyb-friends {
-					font-size: 3.3rem;
+					font-size: 2.0rem;
 					display: block;
-					margin-top: 2rem;
+					margin-top: 0.5rem;
 				}
 
 			}
@@ -101,12 +96,12 @@
 			form {
 
 				display: block;
-				margin-top: 3rem;
+				margin-top: 0.5rem;
 
 				div.container {
 
-					margin-top: 3rem;
-					margin-bottom: 3rem;
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
 
 					.tyb-field {
 
@@ -118,16 +113,17 @@
 								display: inline-block;
 								font-family: "roboto_condensedlight";
 								text-transform: uppercase;
-								width: 10rem;
+								width: 7rem;
 								vertical-align: middle;
-								font-size: 2.4rem;
+								font-size: 1.4rem;
 								letter-spacing: 0.2rem;
+								margin-top: 0.6rem;
 								color: #959596;
 							}
 							
 							select {
 								display: inline-block;
-								width: 32.5rem;
+								width: 16.5rem;
 								-webkit-appearance: none;
 								-moz-appearance: none;
 								appearance: none;
@@ -158,8 +154,8 @@
 
 						input[type="submit"] {
 							color: #FFF;
-							font-size: 2em;
-							padding: 7px 21px 7px 21px;
+							font-size: 1.5rem;
+							padding: 3px 10px 3px 10px;
 							height: auto;
 						}
 
@@ -168,7 +164,191 @@
 				}
 
 				div.container:first-child {
-					margin-top: 10rem;
+					margin-top: 2.5rem;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	.tyb-contact-container {
+
+		height: 100%;
+
+		.tyb-contact-hero-section {
+			
+			background-size: cover;
+			background-position: center bottom;
+			background-image: url('../images/bg-contacts-page.png');
+			text-align: center;
+			position: relative;
+			height: 100%;
+			top: 0;
+
+			.tyb-contact-hero-wrapper {
+				
+				width: 100%;
+				height: 100%;
+				color: #FFF;
+
+				div.container {
+
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					div.wrapper {
+						
+						position: absolute;
+						margin: 0;
+						top: 50%;
+						transform: translate(0, -50%);
+						width: 100%;
+						text-align: justify;
+
+						h1 {
+							font-family: "roboto_condensedbold";
+							text-transform: uppercase;
+							letter-spacing: 0.125rem;
+							border-top: 1px solid #FFF;
+							display: inline-block;
+							margin-bottom: 7rem;
+							padding-top: 1rem;
+						}
+
+						p {
+							letter-spacing: 0.1rem;
+							line-height: 3rem;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.tyb-home-help-container {
+
+		text-align: center;
+		position: relative;
+		color: #FFF;
+
+		div.container {
+
+			position: relative;
+			height: 100%;
+
+			div.tyb-center-middle {
+
+				position: absolute;
+				margin: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				width: 100%;
+
+				h2 {
+
+					text-transform: uppercase;
+					font-family: "roboto_condensedbold";
+					letter-spacing: 0.7rem;
+					font-size: 5.3rem;
+
+					span {
+						font-family: "roboto_condensedlight";
+					}
+
+					span.tyb-friends {
+						font-size: 3.3rem;
+						display: block;
+						margin-top: 2rem;
+					}
+
+				}
+				
+				form {
+
+					display: block;
+					margin-top: 3rem;
+
+					div.container {
+
+						margin-top: 3rem;
+						margin-bottom: 3rem;
+
+						.tyb-field {
+
+							text-align: left;
+
+							&.needs {
+
+								label {
+									display: inline-block;
+									font-family: "roboto_condensedlight";
+									text-transform: uppercase;
+									width: 10rem;
+									vertical-align: middle;
+									font-size: 2.4rem;
+									letter-spacing: 0.2rem;
+									color: #959596;
+								}
+								
+								select {
+									display: inline-block;
+									width: 32.5rem;
+									-webkit-appearance: none;
+									-moz-appearance: none;
+									appearance: none;
+									border-radius: 0;
+									color: #959596;
+									background-color: transparent;
+									border-top: none;
+									border-left: none;
+									border-right: none;
+									border-bottom: 1px solid #959596;
+								}
+
+							}
+
+							input[type="text"] {
+								color: #959596;
+								background-color: transparent;
+								border-top: none;
+								border-left: none;
+								border-right: none;
+								border-bottom: 1px solid #959596;
+								-webkit-appearance: none;
+								-moz-appearance: none;
+								appearance: none;
+								border-radius: 0;
+								width: 100%;
+							}
+
+							input[type="submit"] {
+								color: #FFF;
+								font-size: 2em;
+								padding: 7px 21px 7px 21px;
+								height: auto;
+							}
+
+						}
+
+					}
+
+					div.container:first-child {
+						margin-top: 10rem;
+					}
+
 				}
 
 			}

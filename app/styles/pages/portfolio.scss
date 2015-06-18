@@ -30,6 +30,7 @@
 					position: absolute;
 					bottom: 0;
 					margin-bottom: 0;
+					margin-left: 8rem;
 
 					li {
 						display: inline-block;
@@ -39,6 +40,107 @@
 						color: #FFF;
 						margin: 2.5rem 1rem;
 						cursor: pointer;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.tyb-portfolio-main-content {
+
+		ul {
+
+			list-style: none;
+
+			li {
+
+				margin-bottom: 0;
+
+				div.tyb-project-wrapper {
+
+					background-position: center center;
+					overflow-x: hidden;
+					color: #FFF;
+
+					div.container-large {
+			
+						position: relative;
+						height: 100%;
+						width: 80%;
+						text-align: left;
+						float: right;
+
+						div.tyb-center-middle {
+
+							position: absolute;
+							margin: 0;
+							top: 50%;
+							transform: translate(0, -50%);
+							width: 100%;
+
+							div[tyb-bg] {
+								padding-bottom: 16px;
+								background-repeat: no-repeat;
+								background-position: 0 15px;
+								display: inline-block;
+								border-top: 0.1rem solid #FFF;
+							}
+
+							p {
+								text-align: justify;
+								margin-top: 3rem;
+								line-height: 4rem;
+								font-size: 1.6rem;
+							}
+
+							ul.tyb-skill-list {
+
+								list-style: none;
+								margin: 0;
+
+								li {
+									font-size: 2.5rem;
+									display: inline-block;
+									text-transform: uppercase;
+									margin: 1rem 1rem 0rem 1rem;
+								}
+
+								li:before {
+									content: "<";
+									display: inline-block;
+								}
+
+								li:after {
+									content: ">";
+									display: inline-block;
+								}
+
+							}
+
+							div.four.columns {
+								margin-top: 7rem;
+							}
+
+							div.tyb-laptop {
+								
+								background-image: url("../images/browser-outline.png");
+								height: 708px;
+								background-position: 8.7rem 0;
+								background-repeat: no-repeat;
+
+								img {
+									float: right;
+									margin-top: 8.75rem;
+								}
+
+							}
+
+						}
+
 					}
 
 				}

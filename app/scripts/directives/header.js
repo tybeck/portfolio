@@ -27,39 +27,61 @@ angular.module('tyb')
 
                     getElement = function (path) {
 
-                    if(path === '/') {
+                        if(path === '/') {
 
-                        path = '/home';
+                            path = '/home';
 
-                    }
+                        }
 
-                    previousPath = path;
+                        previousPath = path;
 
-                    var el = element[0],
+                        var el = element[0],
 
-                        linkElement = el.querySelector('a[href="#' + path + '"]');
+                            linkElement = el.querySelector('a[href="#' + path + '"]');
 
-                    if(linkElement) {
+                        var nodeList = Array.prototype.slice.call(el.querySelectorAll('a[href="#' + path + '"]'));
 
-                        $timeout(function () {
+                        if(nodeList) {
 
-                            var boundingRect = linkElement.getBoundingClientRect();
+                            angular.forEach(nodeList, function (node) {
 
-                            scope.$emit('header.selector', {
+                                var computed = window.getComputedStyle(node.parentNode, null);
 
-                                'width': linkElement.offsetWidth,
+                                if(computed.getPropertyValue('display') !== 'none') {
 
-                                'left': boundingRect.left,
+                                    linkElement = node;
 
-                                'lastElement': linkElement
+                                }
 
                             });
 
+                        }
+
+                        $timeout(function () {
+
+                            if(linkElement) {
+
+                                $timeout(function () {
+
+                                    var boundingRect = linkElement.getBoundingClientRect();
+
+                                    scope.$emit('header.selector', {
+
+                                        'width': linkElement.offsetWidth,
+
+                                        'left': boundingRect.left,
+
+                                        'lastElement': linkElement
+
+                                    });
+
+                                }, 50);
+
+                            }
+
                         }, 50);
 
-                    }
-
-                };
+                    };
 
                 $rootScope.$on('tyb.resize', function () {
 

@@ -31,7 +31,7 @@ angular.module('tyb')
 
 				broadcastVisibility: function () {
 
-					$rootScope.$broadcast('tyb.visibility');
+					$rootScope.$broadcast('tyb.visibility', scope.getWindowDimensions());
 
 				}
 

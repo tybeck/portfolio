@@ -1,5 +1,8 @@
 footer {
 
+	margin-bottom: 2rem;
+	display: block;
+
 	ul {
 
 		list-style: none;
@@ -8,8 +11,9 @@ footer {
 		li {
 
 			display: inline-block;
-			margin-right: 2rem;
-			font-size: 1.8rem;
+			margin-right: 0.5rem;
+			margin-left: 0.5rem;
+			font-size: 1.5rem;
 
 			a {
 				color: #000;
@@ -37,6 +41,55 @@ footer:before {
 	height: 174px;
 	margin-right: auto;
 	text-align: center;
-	margin-bottom: 8rem;
-	margin-top: 13rem;
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	footer {
+
+		ul {
+
+			list-style: none;
+			margin-bottom: 1.5rem;
+
+			li {
+
+				display: inline-block;
+				margin-right: 2rem;
+				margin-left: 0rem;
+				font-size: 1.8rem;
+
+				a {
+					color: #000;
+					text-transform: uppercase;
+				}
+
+			}
+
+		}
+
+		a {
+			color: #000;
+		}
+
+	}
+
+	footer:before {
+		content: "";
+		display: block;
+		background: url("../images/sprite.png");
+		background-position: 0px -431px;
+		width: 173px;
+		background-repeat: no-repeat;
+		margin-left: auto;
+		height: 174px;
+		margin-right: auto;
+		text-align: center;
+		margin-bottom: 8rem;
+		margin-top: 13rem;
+	}
+
 }
