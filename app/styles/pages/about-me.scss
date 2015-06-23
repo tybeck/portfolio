@@ -100,9 +100,140 @@
 
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	.tyb-about-container {
+
+		.tyb-about-hero-section {
+			
+			background-size: cover;
+			background-position: center bottom;
+			background-image: url('../images/bg-aboutme.png');
+			text-align: center;
+			position: relative;
+			height: 100%;
+			top: 0;
+
+			.tyb-about-hero-wrapper {
+
+				div.container {
+
+					div.wrapper {
+
+						div.content {
+							margin-top: 10rem;
+							margin-right: 5rem;
+							margin-left: 5rem;
+						}
+
+						h1 {
+							font-family: "roboto_condensedbold";
+							text-transform: uppercase;
+							letter-spacing: 0.125rem;
+							border-top: 1px solid #FFF;
+							display: inline-block;
+							margin-bottom: 5rem;
+							padding-top: 1rem;
+							font-size: 4rem;
+						}
+
+						p {
+							letter-spacing: 0.1rem;
+							line-height: 5rem;
+							font-size: 1.5rem;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.tyb-author {
+			background: url("../images/sprite.png");
+			background-repeat: no-repeat;
+			background-position: -326px -360px;
+			height: 199px;
+			width: 199px;
+			float: right;
+			opacity: 0.85;
+		}
+
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+	.tyb-about-container {
+
+		.tyb-about-hero-section {
+			
+			background-size: cover;
+			background-position: center bottom;
+			background-image: url('../images/bg-aboutme.png');
+			text-align: center;
+			position: relative;
+			height: 100%;
+			top: 0;
+
+			.tyb-about-hero-wrapper {
+
+				div.container {
+
+					div.wrapper {
+
+						div.content {
+							margin-top: 10rem;
+							margin-right: 10rem;
+							margin-left: 10rem;
+						}
+
+						h1 {
+							font-family: "roboto_condensedbold";
+							text-transform: uppercase;
+							letter-spacing: 0.125rem;
+							border-top: 1px solid #FFF;
+							display: inline-block;
+							margin-bottom: 5rem;
+							padding-top: 1rem;
+							font-size: 4rem;
+						}
+
+						p {
+							letter-spacing: 0.1rem;
+							line-height: 5rem;
+							font-size: 1.5rem;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.tyb-author {
+			background: url("../images/sprite.png");
+			background-repeat: no-repeat;
+			background-position: -326px -360px;
+			height: 199px;
+			width: 199px;
+			float: right;
+			opacity: 0.85;
+		}
+
+	}
+
+}
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: $screen-lg-min) {
 
 	.tyb-about-container {
 

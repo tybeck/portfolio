@@ -685,7 +685,7 @@
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
 
 	.tyb-home-container {
 
@@ -825,7 +825,7 @@
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: $screen-md-min) {
 
 
 	.tyb-home-container {
@@ -1082,6 +1082,6 @@
 
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: $screen-lg-min) {
 
 }
