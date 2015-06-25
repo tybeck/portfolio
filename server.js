@@ -123,6 +123,8 @@ var Server = {
 
 		app.use('/images', express.static(this.dir + 'www/images/'));
 
+		app.use('/downloads', express.static(this.dir + 'downloads/'));
+
 		app.set('views', server.dir);
 
 		app.engine('.html', require('ejs').renderFile);
