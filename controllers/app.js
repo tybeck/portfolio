@@ -1,10 +1,16 @@
 var content = require('../services/content');
 
-exports.getProject = function (req, res) {
+exports.getProject = function (req, res, next) {
 
 	content.getProject(req).then(function (url) {
 
-		return res.render(url);
+		if(url) {
+
+			return res.render(url);
+
+		}
+
+		return next();
 
 	});
 

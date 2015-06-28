@@ -66,6 +66,14 @@ var Server = {
 
 	'dir': __dirname + '/',
 
+	/**
+	 * Queued messages
+	 * @property messages
+	 * @type Array
+	 */
+
+	'messages': [],
+
 	'config': {
 
 		/**
@@ -124,6 +132,8 @@ var Server = {
 		app.use('/images', express.static(this.dir + 'www/images/'));
 
 		app.use('/downloads', express.static(this.dir + 'downloads/'));
+
+		app.use(require('body-parser').urlencoded({ extended: false }));
 
 		app.set('views', server.dir);
 
@@ -191,6 +201,14 @@ var Server = {
 
 	},
 
+	queueMsg: function (message) {
+
+		this.messages.push(message);
+
+		return this;
+
+	},
+
 	/**
 	 * Setup primary application.
 	 * @method setup
@@ -234,13 +252,15 @@ var Server = {
 
 			if(status) {
 
-				console.log('Database connection established!');
+				self
+					.msg('')
+					.msg('Database connection established!');
 
 				self.listen();
 
 			} else {
 
-				console.log('Could not establish database connection!');
+				self.msg('Could not establish database connection!');
 
 				process.exit(0);
 
@@ -294,8 +314,9 @@ var Server = {
 
 				});
 
-				self.routes()
-					.database();
+				self
+					.database()
+					.routes();
 
 			});
 
@@ -337,6 +358,13 @@ var Server = {
 
 			self.msg('Starting application - v' + self.APP_VERSION)
 				.msg('Running on http://' + host + ':' + port);
+
+
+			_.forEach(self.messages, function (message) {
+
+				self.msg(message);
+
+			});
 
 		});
 

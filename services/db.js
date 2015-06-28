@@ -13,9 +13,11 @@ var mongoose = require('mongoose'),
 
 		create: function () {
 
-			mongoose.connect('mongodb://localhost/tyb');
+			var connection = mongoose.createConnection('mongodb://localhost/tyb');
 
-			db = mongoose.connection;
+			db = connection;
+
+			this.db = connection;
 
 			return this;
 
@@ -66,7 +68,9 @@ var mongoose = require('mongoose'),
 
 			return deferred.promise;
 
-		}
+		},
+
+		'db': null
 
 	};
 

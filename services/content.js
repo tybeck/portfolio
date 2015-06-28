@@ -20,9 +20,17 @@ module.exports.getProject = getProject = function (req) {
 
 				if(project.name === projectName) {
 
-					deferred.resolve('app' + req.originalUrl + 
+					if(project.index) {
 
-						'/' + project.index);
+						deferred.resolve('app' + req.originalUrl + 
+
+							'/' + project.index);
+
+					} else {
+
+						deferred.resolve(null);
+
+					}
 
 				}
 
