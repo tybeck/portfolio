@@ -123,6 +123,17 @@ var Server = {
 
 			statics = server.statics;
 
+		app.use(function (req, res, next) {
+
+			res.header('Access-Control-Allow-Origin', '*');
+			res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+			res.header('Access-Control-Allow-Headers', 'Content-Type');
+			res.header('Access-Control-Expose-Headers', 'Accept-Ranges, Content-Encoding, Content-Length, Content-Range');
+			
+			return next();
+
+		});
+
 		app.use(express.static(server.dir));
 
 		app.use('/scripts', express.static(this.dir + 'www/scripts/'));
