@@ -144,7 +144,13 @@ var Server = {
 
 		app.use('/downloads', express.static(this.dir + 'downloads/'));
 
-		app.use(require('body-parser').urlencoded({ extended: false }));
+		app.use(require('body-parser').urlencoded({ 
+
+			'extended': false,
+
+			'limit': '20mb'
+
+		}));
 
 		app.set('views', server.dir);
 
@@ -369,7 +375,6 @@ var Server = {
 
 			self.msg('Starting application - v' + self.APP_VERSION)
 				.msg('Running on http://' + host + ':' + port);
-
 
 			_.forEach(self.messages, function (message) {
 
