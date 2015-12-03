@@ -10,3 +10,5 @@ app/projects
 npm-debug.log
 www
 psds
+.com*
+dump.rdb
