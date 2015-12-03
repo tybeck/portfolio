@@ -83,7 +83,7 @@ module.exports.getProjects = getProjects = function (dir) {
 
 					fs.stat(projectInfo, function (errFile, statFile) {
 
-						if(!errFile && statFile.isFile()) {
+						if(statFile.isFile()) {
 
 							fs.readFile(projectInfo, 'utf8', function (err, data) {
 
@@ -98,10 +98,6 @@ module.exports.getProjects = getProjects = function (dir) {
 							  }
 
 							});
-
-						} else {
-
-							return next();
 
 						}
 
