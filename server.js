@@ -1,7 +1,7 @@
 /**
   * Primary Application for Tyler Beck's Portfolio
   * @author: Tyler Beck
-  * @version: 0.0.2
+  * @version: 0.0.3
 */
 
 'use strict';
@@ -20,7 +20,15 @@ var extend = require('node.extend'),
 	 * @type Object
 	 */
 
-	_ = require('lodash');
+	_ = require('lodash'),
+
+	/**
+	 * This module contains utilities for handling and transforming file paths
+	 * @property path
+	 * @type Object
+	 */
+
+	path = require('path');
 
 var Server = {
 
@@ -56,7 +64,7 @@ var Server = {
 
 	'fs': require('./services/fs'),
 
-	'APP_VERSION': '0.0.2',
+	'APP_VERSION': '0.0.3',
 
 	/**
 	 * Current directory of our server application.
@@ -95,14 +103,14 @@ var Server = {
 
 	'statics': {
 
-		'ENV_TYPES': { 
-	
+		'ENV_TYPES': {
+
 			'DEVELOPMENT': 'development',
 
 			'PRODUCTION': 'production'
-		
+
 		}
-	
+
 	},
 
 	/**
@@ -129,7 +137,7 @@ var Server = {
 			res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
 			res.header('Access-Control-Allow-Headers', 'Content-Type');
 			res.header('Access-Control-Expose-Headers', 'Accept-Ranges, Content-Encoding, Content-Length, Content-Range');
-			
+
 			return next();
 
 		});
@@ -137,14 +145,16 @@ var Server = {
 		app.use(express.static(server.dir));
 
 		app.use('/scripts', express.static(this.dir + 'www/scripts/'));
-		
+
 		app.use('/styles', express.static(this.dir + 'www/styles/'));
 
 		app.use('/images', express.static(this.dir + 'www/images/'));
 
 		app.use('/downloads', express.static(this.dir + 'downloads/'));
 
-		app.use(require('body-parser').urlencoded({ 
+		app.use(express.static(path.join(this.dir, 'www/')));
+
+		app.use(require('body-parser').urlencoded({
 
 			'extended': false,
 
@@ -161,15 +171,15 @@ var Server = {
 		switch(config.ENVIRONMENT) {
 
 			case statics.ENV_TYPES.DEVELOPMENT:
-							
+
 				app.use(statics.ENV_TYPES.DEVELOPMENT, function () {
 
-					app.set('view options', { 
+					app.set('view options', {
 
 						'pretty': true
 
 					});
-					
+
 					app.use(express.errorHandler({
 
 						'dumpExceptions': true,
@@ -177,13 +187,13 @@ var Server = {
 						'showStack': true
 
 					}));
-				
+
 				});
-			
+
 			break;
-			
+
 			case statics.ENV_TYPES.PRODUCTION:
-			
+
 				app.use(statics.ENV_TYPES.PRODUCTION, function () {
 
 					app.set('view options', {
@@ -191,11 +201,11 @@ var Server = {
 						'pretty': false
 
 					});
-					
+
 					app.use(express.errorHandler());
-				
+
 				});
-			
+
 			break;
 
 		}
@@ -288,7 +298,7 @@ var Server = {
 		return this;
 
 	},
-	
+
 	/**
 	 * Setup our projects.
 	 * @method setupProjects
@@ -315,7 +325,7 @@ var Server = {
 
 					_.forEach(project.assets, function (asset) {
 
-						self.app.use(asset.web, express.static(self.dir + 
+						self.app.use(asset.web, express.static(self.dir +
 
 							asset.server));
 
@@ -323,7 +333,7 @@ var Server = {
 
 					if(project.hook && project.hook.length) {
 
-						require('./app/projects/' + project.name + '/' + 
+						require('./app/projects/' + project.name + '/' +
 
 							project.hook).apply(self);
 

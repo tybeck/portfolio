@@ -9,7 +9,9 @@
 	"zoom": "images/projects/sony/sony-zoom.png",
 	"carousel": "images/projects/sony/sony-carousel.png",
 	"carouselTitle": "Sony Product Detail Page",
-	"carouselView": "laptop"
+	"carouselView": "laptop",
+	"featured": true,
+	"type": "website"
 }, {
 	"name": "Petsmart",
 	"logoLabel": "images/projects/petsmart/petsmart-logo.png",
@@ -21,7 +23,9 @@
 	"zoom": "images/projects/petsmart/petsmart-zoom.png",
 	"carousel": "images/projects/petsmart/petsmart-carousel.png",
 	"carouselTitle": "Petsmart Website",
-	"carouselView": "tablet"
+	"carouselView": "tablet",
+	"featured": true,
+	"type": "website"
 }, {
 	"name": "Steinmart",
 	"logoLabel": "images/projects/steinmart/steinmart-logo.png",
@@ -33,5 +37,7 @@
 	"zoom": "images/projects/steinmart/steinmart-zoom.png",
 	"carousel": "images/projects/steinmart/steinmart-carousel.png",
 	"carouselTitle": "Steinmart Website",
-	"carouselView": "phone"
+	"carouselView": "phone",
+	"featured": true,
+	"type": "mobile"
 }]

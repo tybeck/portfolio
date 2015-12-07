@@ -52,7 +52,7 @@ module.exports = function (grunt) {
             'templates': 'templates'
 
         },
-        
+
         'nodemon': {
 
           'dev': {
@@ -66,9 +66,9 @@ module.exports = function (grunt) {
         // Automatically inject bower_components into the app
 
         'bowerInstall': {
-         
+
           'target': {
-         
+
             'src': [
 
               '<%= paths.dist %>/*.html'
@@ -238,22 +238,22 @@ module.exports = function (grunt) {
         },
 
         // Copies remaining files to places other tasks can use
-        
+
         'copy': {
 
           'main': {
-            
+
             'files': [
 
               {
 
                 'expand': true,
-            
+
                 'cwd': '<%= paths.app %>/',
-            
+
                 'dest': '<%= paths.dist %>/',
-            
-                'src': 'index.html'
+
+                'src': '*.html'
 
               }
 
@@ -268,11 +268,11 @@ module.exports = function (grunt) {
               {
 
                 'expand': true,
-            
+
                 'cwd': '<%= paths.app %>/<%= paths.templates %>/',
-            
+
                 'dest': '<%= paths.dist %>/<%= paths.templates %>/',
-            
+
                 'src': '{,*/}*.html'
 
               }
@@ -288,11 +288,11 @@ module.exports = function (grunt) {
               {
 
                 'expand': true,
-            
+
                 'cwd': '<%= paths.app %>/<%= paths.styles %>/fonts/',
-            
+
                 'dest': '<%= paths.dist %>/<%= paths.styles %>/fonts/',
-            
+
                 'src': '{,*/}*.*'
 
               }
@@ -310,11 +310,11 @@ module.exports = function (grunt) {
                 'expand': true,
 
                 'dot': true,
-            
+
                 'cwd': '<%= paths.app %>/<%= paths.images %>/',
-            
+
                 'dest': '<%= paths.dist %>/<%= paths.images %>/',
-            
+
                 'src': '*/**/*.{webp,gif,png,jpg}'
 
               }, {
@@ -322,11 +322,11 @@ module.exports = function (grunt) {
                 'expand': true,
 
                 'dot': true,
-            
+
                 'cwd': '<%= paths.app %>/<%= paths.images %>/',
-            
+
                 'dest': '<%= paths.dist %>/<%= paths.images %>/',
-            
+
                 'src': '{,*/}*.{webp,gif,png,jpg}'
 
               }
@@ -336,29 +336,29 @@ module.exports = function (grunt) {
           },
 
           'styles': {
-        
+
             'expand': true,
-        
+
             'cwd': '.tmp/',
-        
+
             'dest': '<%= paths.dist %>/',
-        
+
             'src': '{,*/}*.css'
-          
+
           },
 
           'scripts': {
-            
+
             'files': [
 
               {
 
                 'expand': true,
-            
+
                 'cwd': '<%= paths.app %>/<%= paths.scripts %>/',
-            
+
                 'dest': '<%= paths.dist %>/<%= paths.scripts %>/',
-            
+
                 'src': '{,*/}*.js'
 
               }
@@ -366,7 +366,7 @@ module.exports = function (grunt) {
             ]
 
           }
-        
+
         },
 
         'watch': {

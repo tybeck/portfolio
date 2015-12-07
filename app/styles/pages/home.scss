@@ -25,7 +25,7 @@
 			width: 100%;
 
 			h1:first-child {
-				
+
 				font-family: "roboto_condensedbold";
 				text-transform: uppercase;
 				letter-spacing: 0.5rem;
@@ -86,7 +86,7 @@
 	}
 
 	.tyb-home-main-content {
-		
+
 		margin-top: 4.0rem;
 
 		h2:first-child {
@@ -208,7 +208,7 @@
 			}
 
 			div.tyb-see-more-link {
-				
+
 				color: #000;
 				text-transform: uppercase;
 				margin-bottom: 7rem;
@@ -229,13 +229,15 @@
 
 	.tyb-portfolio-container {
 
+		height: auto;
+
 		a.tyb-portfolio-link-button {
 			display: inline-block;
 			margin-bottom: 6.0rem;
 		}
 
 		.tyb-featured-carousel-container {
-			
+
 			background: url('../images/bg-carousel.png');
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -509,7 +511,7 @@
 					font-size: 2rem;
 					font-family: "roboto_condensedbold";
 					letter-spacing: 0.05rem;
-				
+
 					span {
 						font-family: "roboto_condensedlight";
 					}
@@ -578,15 +580,15 @@
 				display: inline-block;
 
 			}
-		
+
 		}
 
 	}
 
 }
 
-@media only screen 
-  and (orientation: landscape) { 
+@media only screen
+  and (orientation: landscape) {
 
 	.tyb-home-container {
 
@@ -696,7 +698,7 @@
 				margin: -10.0rem auto auto auto;
 
 				h1:first-child {
-					
+
 					font-size: 8.75rem;
 
 				}
@@ -737,7 +739,7 @@
 		}
 
 		.tyb-home-main-content {
-			
+
 			margin-top: 6.0rem;
 
 			h2:first-child {
@@ -855,7 +857,7 @@
 				width: 100%;
 
 				h1:first-child {
-					
+
 					font-family: "roboto_condensedbold";
 					text-transform: uppercase;
 					letter-spacing: 0.5rem;
@@ -915,7 +917,7 @@
 		}
 
 		.tyb-home-main-content {
-			
+
 			margin-top: 8.0rem;
 
 			h2:first-child {
@@ -981,7 +983,7 @@
 						text-transform: uppercase;
 						letter-spacing: 0.1rem;
 						margin-bottom: 3rem;
-						
+
 						.tyb-skill {
 
 							> span {
@@ -1043,10 +1045,10 @@
 
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
   and (-webkit-min-device-pixel-ratio: 1) {
 
 	.tyb-home-container {

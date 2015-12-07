@@ -2,16 +2,52 @@ var projects = require('../models/projects');
 
 exports.getProjects = function (req, res) {
 
-	projects.getProjectsByName(req.query.names).then(function (data) {
+	if(req.query.names) {
 
-		var JSON = {
+		projects.getProjectsByName(req.query.names).then(function (data) {
 
-			'projects': data
+			var JSON = {
 
-		}
+				'projects': data
 
-		return res.json(JSON);
+			}
 
-	});
+			return res.json(JSON);
+
+		});
+
+	} else if (req.query.featured) {
+
+		projects.getFeatured().then(function (data) {
+
+			var JSON = {
+
+				'projects': data
+
+			}
+
+			return res.json(JSON);
+
+		});
+
+	} else if (req.query.type) {
+
+		projects.getProjectsByType(req.query.type).then(function (data) {
+
+			var JSON = {
+
+				'projects': data
+
+			}
+
+			return res.json(JSON);
+
+		});
+
+	} else {
+
+		return res.json({});
+
+	}
 
 };
